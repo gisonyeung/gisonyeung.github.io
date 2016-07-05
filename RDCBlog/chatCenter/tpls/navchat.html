@@ -1,0 +1,30 @@
+<div class="scroll-wrapper chat_list scrollbar-dynamic">
+    <div class="chat_list scrollbar-dynamic scroll-content scroll-scrolly_visible" id="J_NavChatScrollBody">
+        <p class="ico_loading" ng-show="chatLoading"><img src="../images/loading.gif" alt="">正在获取最近的聊天...</p>
+        <div ng-hide="chatLoading">
+            <p class="ico_loading" ng-hide="chatList.length > 0">暂无最近消息</p>
+            <div ng-repeat="chatContact in chatList">
+                <div class="chat_item slide-left" chat-contact-directive ng-click="toggle(chatContact.userid,$index)" ng-class="{'active':current.chatPerson.userid == chatContact.userid}">
+                    <div class="ext">
+                        <p class="attr">19:19</p>
+                    </div>
+                    <div class="avatar">
+                        <img class="img" src="../images/otherhead.jpg">
+                        <i class="icon web_wechat_reddot" ng-if="chatContact.isUnread"></i>
+                    </div>
+                    <div class="info">
+                        <h3 class="nickname">
+                            <span class="nickname_text">{{chatContact.remark || chatContact.nickName}}</span>
+                        </h3>
+                        <p class="msg">
+                            <span ng-show="chatContact.number > 1">[{{chatContact.number}}条]</span>
+                            <span ng-bind-html="chatContact.lastMessage | trustHtml">{{chatContact.lastMessage}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</div>

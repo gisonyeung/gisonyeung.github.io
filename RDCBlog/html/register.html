@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RDCBlog 注册</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="shortcut icon" href="../images/blog.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+<body>
+	<img src="../images/login.png" class="logo" />
+	<div id="register">
+		<form>
+			<div class="wrap">
+				<div class="inputPack">
+					<span class="icon-user iconPst"></span>
+					<input class="username" type="text" placeholder="Username" title="用户名" maxlength="25" />
+					<p class="textTipPack">
+						<span class="textTipIcon icon-lightbulb icon-large"></span>
+						<span class="textTip">用户名不能修改，3-25个字符，可由字母、数字、下划线组成</span>
+					</p>
+				</div>
+				<div class="inputPack">
+					<span class="icon-lock iconPst"></span>
+					<input class="newPwd" type="password" placeholder="Password" title="密码" maxlength="30" />
+					<p class="textTipPack">
+						<span class="textTipIcon icon-lightbulb icon-large"></span>
+						<span class="textTip">6-30个字符，可由字母、数字、标点符号组成</span>
+					</p>
+				</div>	
+				<div class="inputPack">
+					<span class="icon-lock iconPst"></span>
+					<input class="confirmPwd" type="password" placeholder="Confirm password" title="确认密码" maxlength="16" readonly="readonly"/>
+					<p class="textTipPack">
+						<span class="textTipIcon icon-lightbulb icon-large"></span>
+						<span class="textTip">重新输入密码</span>
+					</p>
+				</div>
+				<div class="inputPack">
+					<span class="icon-envelope-alt iconPst"></span>
+					<input class="email" type="text" placeholder="E-mail" title="邮箱"/>
+					<p class="textTipPack">
+						<span class="textTipIcon icon-lightbulb icon-large"></span>
+						<span class="textTip">注册邮箱不能修改，是找回密码的凭证</span>
+					</p>
+				</div>
+			</div>
+			<div class="wrap">
+				<div class="inputPack">
+					<span class="icon-user-md iconPst"></span>
+					<input class="nickname" type="text" placeholder="昵称" title="昵称"/>
+					<p class="textTipPack">
+						<span class="textTipIcon icon-lightbulb icon-large"></span>
+						<span class="textTip">最多20个字符，一个汉字为两个字符</span>
+					</p>
+				</div>
+				<div class="inputPack bg">
+					<span class="grade">年级</span>
+					<select class="slt gra">
+					</select>
+					&nbsp
+					<span class="major">方向</span>
+					<select class="slt maj">
+						<option>前端</option>
+						<option>后台</option>	
+						<option>安卓</option>
+						<option>C++</option>
+						<option>嵌入式</option>
+					</select>
+				</div>
+				<div class="inputPack bg Sex">
+					<span>性别</span>
+					<input id="male" class="sexRadio" type="radio" name="sex" checked="checked"/>
+					<label for="male" class="sexLabel">
+						<span class="icon-check icon-large check">
+						</span>
+						<span class="icon-check-empty icon-large empty">
+						</span>
+						<span class="sexText">男</span>
+					</label>
+					<input id="female" class="sexRadio" type="radio" name="sex" />
+					<label for="female" class="sexLabel">
+						<span class="icon-check icon-large check">
+						</span>
+						<span class="icon-check-empty icon-large empty">
+						</span>
+						<span class="sexText">女</span>
+					</label>			
+				</div>
+			</div>
+			<div class="inputPack checkPst">
+				<span class="icon-key iconPst"></span>
+				<input class="passCheck" type="text" placeholder="Pass check" title="通行验证"/>
+				<p class="textTipPack">
+					<span class="textTipIcon icon-lightbulb icon-large"></span>
+					<span class="textTip">注册码请在研发Q群询问哦~</span>
+				</p>
+			</div>
+			<input class="submit" type="button" value="REGISTER RDC" title="注册"/>
+		</form>
+	</div>
+	 <div id="success">
+    	<p><span class="icon-ok icon-4x OK_color"></span>注册成功！</p>
+    	<p>3秒后自动<a href="login.html">返回登陆页面</a></p>
+    </div>
+    <div id="fail">
+    	<p><span class="icon-remove icon-4x remove_color"></span>注册失败！</p>
+    	<p>可能是出现错误操作或服务器出现问题，点击此处<a href="login.html">返回登陆页面</a></p>
+    </div>
+	<!-- 通用部分 -->
+	<div id="tipBox">
+    	<div class="tipHead">
+    		<p>Tip from RDC Blog</p><span class="icon-remove icon-large tip_color"></span>
+    		<div class="clr"></div>
+    	</div>
+    	<div class="tipContent">
+    		<p>This is the content.</p>
+    	</div>
+    	<div class="tipFoot">
+    		<input class="tipBtn" type="button" value="Close"/>
+    		<div class="clr"></div>
+    	</div>
+    </div>
+    <div id="mask"></div>
+    <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../js/register.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>博客</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="shortcut icon" href="../images/blog.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/blog.css">
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+<body>
+	<!-- 小屏 -->
+	<div class="menu">
+		<a class="menuSwitch icon-reorder"></a>
+	</div>
+	<!-- 通用侧边栏 -->
+	<div class="sideBar">
+		<a class="firstFloor"><span class="icon-home"> </span>主页</a>
+		<a class="firstFloor"><span class="icon-book"> </span>博客</a>
+			<a class="secondFloor">web前端</a>
+			<a class="secondFloor">后台开发</a>
+			<a class="secondFloor">安卓</a>
+			<a class="secondFloor">C++</a>
+			<a class="secondFloor">其他</a>
+		<a class="firstFloor"><span class="icon-camera-retro"> </span>照片墙</a>
+		<a class="firstFloor"><span class="icon-github"> </span>代码分享</a>
+		<a class="firstFloor"><span class="icon-flag"> </span>关于研发</a>
+			<a class="secondFloor">研发成员</a>
+			<a class="secondFloor">成就</a>
+			<a class="secondFloor">关于研发</a>
+	</div>
+	<!-- 登陆弹框 -->
+	<div id="miniLogin">
+			 <p class="loginTitle">登陆</p>
+			 <div class="loginInfo">
+				<span class="icon-user miniPst"></span>
+			 	<input id="miniUsername"  type="text" placeholder="用户名">
+			 </div>
+			 <div class="loginInfo">
+				<span class="icon-lock miniPst"></span>
+			 	<input id="miniPwd" type="password" placeholder="密码" maxlength="25">
+			 </div>
+			 <input class="miniSubmit" type="button" value="登陆">
+			 <a class="miniRegister" href="javascript:;">注册</a>
+	</div>
+	<div class="mainPage">
+		<div class="header">
+			<p class="teamName">RDC</p>
+			<!-- 大屏 -->
+			<ul class="nav">
+				<li><a><span class="lineae"></span>首页</a></li>
+				<li class="navActive"><a><span class="lineae"></span>博客</a>
+					<div class="subnav">
+						<ul>
+							<li><a><span class="lineae1"></span>全部文章</a></li>
+							<li><a><span class="lineae1"></span>web前端</a></li>
+							<li><a><span class="lineae1"></span>后台开发</a></li>
+							<li><a><span class="lineae1"></span>安卓</a></li>
+							<li><a><span class="lineae1"></span>C++</a></li>
+							<li><a><span class="lineae1"></span>其他</a></li>
+						</ul>
+					</div>
+				</li>
+				<li><a><span class="lineae"></span>照片墙</a></li>
+				<li><a><span class="lineae"></span>代码分享</a></li>
+				<li><a><span class="lineae"></span>关于研发</a>
+					<div class="subnav1">
+						<ul>
+							<li><a><span class="lineae1"></span>小组方向</a></li>
+							<li><a><span class="lineae1"></span>研发成员</a></li>
+							<li><a><span class="lineae1"></span>成就</a></li>
+							<li><a><span class="lineae1"></span>关于研发</a></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		<div class="user">
+			<a class="loginButton" href="javascript:;">登陆</a>
+			<div class="userHead">
+				<img src="../images/headm.jpg" class="userHeadImg">
+				<div class="selfinfo">
+					<ul>
+						<li id="nickSwitch"><a><span id="nickname">牛一敏</span><span id="selfData">个人资料</span></a></li>
+						<li>博客管理</li>
+						<li>上传照片</li>
+						<li>分享代码</li>
+						<li id="logout">注销</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="wrap">
+		<div class="main">
+			<div class="tagline">
+				<h1 class="blogTitle">BLOG</h1>
+				<p class="describe">一个来自研发的纯净的技术交流圈</p>
+			</div>
+			<div class="clr"></div>
+			<div class="content">
+				<div class="leftContent">
+					<div class="title">
+						<p class="current">当前所在</p>
+						<p class="location">全部文章<span> > Web前端 > JavaScript</span></p>
+					</div>
+					<p class="blogLoadding"><span class="icon-spinner icon-spin"></span> 正在加载中</p>
+					<div class="articleList">
+
+						<div class="articleElement">
+							<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<a class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</a>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/后台开发.jpg" alt="后台" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/安卓.jpg" alt="Android" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/C++.jpg" alt="C++" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/其他.jpg" alt="C++" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/后台开发.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/安卓.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/其他.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="articleElement">
+							<img src="../images/其他.jpg" alt="Web前端" class="articleLogo">
+							<div class="articleInfoPack">
+								<p class="articleheader">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<div class="clr"></div>
+								<div class="countPack">
+									<p class="countLeft"><span class="countIcon icon-calendar"></span><span>August 3 , 2015</span></p>
+									<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span>牛一敏</span></p></a>
+									<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span>8</span></p>
+									<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span>126</span></p>
+									<p class="like"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+									<div class="clr"></div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="wisdom">
+						<span class="icon-quote-left icon-large"></span>
+						<div class="wisdomInfoPack">
+							<p class="wisdomText">There are two ways to be rich: One is by acquiring much, and the other is by desiring little</p>
+							<p class="wisdomAuthor">- Jackie French Koller</p>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="pagenition" name="24" data-current="1">
+						<a class="pageButton" id="firstPage">
+						首页</a>
+						<div class="pageNumPack">
+							<a class="pageButton pageNum pageActive" id="page1">1</a>
+						</div>
+						<a class="pageButton" id="lastPage">
+						末页</a>
+						<div class="pageControl">
+							<input type="text" id="goNum" maxlength="3">
+							<input type="button" id="goButton" value="Go">
+							<a class="pageButton" id="pageBack">
+							<span class="icon-angle-left icon-large"></span></a>
+							<a class="pageButton" id="pageGo">
+							<span class="icon-angle-right icon-large"></span></a>
+						</div>
+					</div>
+				</div>
+				<div class="rightContent">
+					<div class="allCount">
+						<div class="allElement">
+							<p class="icon-book allBg" id="bookBg"></p>
+							<div class="clr"></div>
+							<p class="allNum" id="book">298</p>
+						</div>
+						<div class="allElement">
+							<p class="icon-camera allBg" id="photoBg"></p>
+							<div class="clr"></div>
+							<p class="allNum" id="photo">164</p>
+						</div>
+						<div class="allElement">
+							<p class="icon-eye-open allBg" id="viewBg"></p>
+							<div class="clr"></div>
+							<p class="allNum" id="view">1234</p>
+						</div>
+						<div class="allElement lastAllEle">
+							<p class="icon-heart allBg" id="likeBg"></p>
+							<div class="clr"></div>
+							<p class="allNum" id="like">89</p>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="widgetPack">
+						<div class="widget" id="categories">
+							<p class="subtitle">Categories</p>
+							<div class="categoryList">
+								<div class="leftCgr">
+									<a class="cgrElement">
+										<span class="cgrName">Web前端</span>
+										<p  class="cgrNum">( <span>25 )</span></p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">后台开发</span>
+										<p  class="cgrNum">( <span>11</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">Android开发</span>
+										<p  class="cgrNum">( <span>21</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">C++游戏开发</span>
+										<p  class="cgrNum">( <span>10</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">杂谈</span>
+										<p  class="cgrNum">( <span>5</span> )</p>
+										<div class="clr"></div>
+									</a>
+								</div>
+								<div class="rightCgr">
+									<a class="cgrElement">
+										<span class="cgrName">JavaScript</span>
+										<p  class="cgrNum">( <span>25 )</span></p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">HTML&CSS</span>
+										<p  class="cgrNum">( <span>11</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">PHP</span>
+										<p  class="cgrNum">( <span>21</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">Tutorials</span>
+										<p  class="cgrNum">( <span>10</span> )</p>
+										<div class="clr"></div>
+									</a>
+									<a class="cgrElement">
+										<span class="cgrName">Java</span>
+										<p  class="cgrNum">( <span>5</span> )</p>
+										<div class="clr"></div>
+									</a>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="widget" id="popular">
+							<div class="popularHeaderPack">
+								<p class="popularHeader">Popular</p>
+								<div class="clr"></div>
+							</div>
+							<div class="popularList">
+								<div class="popularElement">
+									<img src="../images/demohead.jpg" alt="Author" class="popularAuthor">
+									<div class="popularInfo">
+										<a class="popularTitle">webkit内核的safari、 Chrome的Linear Gradients
+										</a>
+										<div class="clr"></div>
+										<p class="popularTimePack"><span class="icon-calendar popularIcon"></span><span class="popularTime">21 March 2015</span></p>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="popularElement">
+									<img src="../images/demohead.jpg" alt="Author" class="popularAuthor">
+									<div class="popularInfo">
+										<a class="popularTitle">webkit内核的safari、 Chrome
+										</a>
+										<div class="clr"></div>
+										<p class="popularTimePack"><span class="icon-calendar popularIcon"></span><span class="popularTime">21 March 2015</span></p>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="popularElement">
+									<img src="../images/demohead.jpg" alt="Author" class="popularAuthor">
+									<div class="popularInfo">
+										<a class="popularTitle">webkit内核的safari、 Chrome的Linear Gradients
+										</a>
+										<div class="clr"></div>
+										<p class="popularTimePack"><span class="icon-calendar popularIcon"></span><span class="popularTime">21 March 2015</span></p>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+								<div class="popularElement">
+									<img src="../images/demohead.jpg" alt="Author" class="popularAuthor">
+									<div class="popularInfo">
+										<a class="popularTitle overFlow">webkit内核的safari、 Chrome内核的safari、 Chromewebkit内核的safari、 Chrome
+										</a>
+										<div class="clr"></div>
+										<p class="popularTimePack"><span class="icon-calendar popularIcon"></span><span class="popularTime">21 March 2015</span></p>
+										<div class="clr"></div>
+									</div>
+									<div class="clr"></div>
+								</div>
+							</div>
+							<div class="clr"></div>
+						</div>
+					</div>
+					<div class="widgetPack">
+						<div class="widget" id="recommended">
+							<p class="subtitle">Recommended</p>
+							<div class="rePackList">
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<a class="reElement">
+									<img src="../images/demohead.jpg" alt="Recommended Author" class="reAuthor">
+								</a>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="widget" id="tags">
+							<p class="subtitle">Tags</p>
+							<div class="tagPack">
+								<a class="tagElement">Web前端</a>
+								<a class="tagElement">JavaScript</a>
+								<a class="tagElement">Java</a>
+								<a class="tagElement">PHP</a>
+								<a class="tagElement">HTML5&CSS3</a>
+								<a class="tagElement">PHP</a>
+								<a class="tagElement">Java</a>
+								<a class="tagElement">C++</a>
+								<a class="tagElement">JavaScript</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>	
+	</div>
+	</div>
+	<div id="blogDemo">
+		<div class="articleElement">
+			<img src="../images/Web前端.jpg" alt="Web前端" class="articleLogo">
+			<div class="articleInfoPack">
+				<p class="articleheader">暂无</p>
+				<div class="clr"></div>
+				<div class="countPack">
+					<p class="countLeft"><span class="countIcon icon-calendar"></span><span class="blogTime">9 April 2015</span></p>
+					<a class="articleUser"><p class="countLeft"><span class="countIcon icon-user"></span><span class="blogAuthor">暂无</span></p></a>
+					<p class="countLeft smallHide"><span class="countIcon icon-comment"></span><span class="blogComment">0</span></p>
+					<p class="countLeft smallHide"><span class="countIcon icon-eye-open"></span><span class="blogView">0</span></p>
+					<p class="like"><span class="countIcon icon-heart likeUp"></span><span class="blogLike">0</span></p>
+					<div class="clr"></div>
+				</div>
+			</div>
+			<div class="clr"></div>
+		</div>
+	</div>
+	<!---------------- 通用部分 ---------------->
+	<!-- 通用页脚 -->
+	<div id="footer">
+		<div class="footWrap">
+			<div class="footColumn">
+				<div class="column">
+					<p class="footHeader">Contact</p>
+					<div class="footInfoPack">
+						<div class="contactElement">
+							<p class="contactEmailLeft"><span class="contactIcon icon-envelope-alt"></span><span>E-mail: </span></p>
+							<p class="footImportant contactEmail">ResearchDeveCenter@163.com</p>
+						</div>
+						<div class="clr"></div>
+						<div class="contactElement">
+							<p class="contactAddressLeft"><span class="contactIcon icon-home"></span><span>Address: </span></p>
+							<p class="footImportant contactAddress">广州市番禺区大学城广东工业大学工学一号馆617</p>
+						</div>
+						<div class="clr"></div>
+						<div class="contactElement">
+							<p class="contactUILeft"><span class="contactIcon  icon-magic"></span><span>UI Designer: </span></p>
+							<a class="footImportant contactUI">@惜有</a>
+						</div>
+						<div class="clr"></div>
+						<div class="contactElement">
+							<span class="contactIcon  icon-leaf"></span>
+							<div class="mtRightPack">
+								<div class="mtInfopack"><span class="mtInfo">Front-end: </span>
+								<a class="footImportant frontPerson">@惜有</a><a class="footImportant frontPerson">@刘艺敏Amie</a>
+								<div class="clr"></div>
+								</div>
+								<div class="mtInfopack"><span class="mtInfo">Backstage: </span>
+								<a class="footImportant frontPerson">@游涓</a>
+							</div>
+							<div class="clr"></div>
+							</div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="clr"></div>
+				</div>
+				<div class="column columnSecond">
+					<p class="footHeader">Latest Posts</p>
+					<div class="footInfoPack post">
+						<div class="postElement">
+							<a class="postHeader footImportant">使用CSS3创建文字颜色渐变(CSS3、Text Gradient)</a>
+							<p class="postTime">25 April 2015</p>
+						</div>
+						<div class="postElement">
+							<a class="postHeader footImportant">webkit内核的safari、 Chrome的LinearGradients</a>
+							<p class="postTime">25 April 2015</p>
+						</div>
+						<div class="postElement">
+							<a class="postHeader footImportant">基于JSP的网站后台管理系统</a>
+							<p class="postTime">25 April 2015</p>
+						</div>
+					</div>
+				</div>
+				<div class="column columnLast">
+					<p class="footHeader">Latest Photo</p>
+					<div class="footInfoPack LPhoto">
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+						<a class="LPhotoPack">
+							<img src="../images/demohead.jpg" alt="Latest" class="LPhotoElement">
+						</a>
+
+						<div class="clr"></div>
+					</div>
+				</div>
+				<div class="clr"></div>
+			</div>
+			<div class="copyRightPack">
+				<p class="copyRight">Copyright 2015 RDC All Rights Reserved.</p>
+				<div class="footNav">
+					<a>首页</a>
+					<a>博客</a>
+					<a>照片墙</a>
+					<a>代码分享</a>
+					<a>关于研发</a>
+				</div>
+				<div class="clr"></div>
+			</div>
+		</div>	
+	</div>
+    <div id="tipBox">
+    	<div class="tipHead">
+    		<p>Tip from RDC Blog</p><span class="icon-remove icon-large tip_color"></span>
+    		<div class="clr"></div>
+    	</div>
+    	<div class="tipContent">
+    		<p>This is the content.</p>
+    	</div>
+    	<div class="tipFoot">
+    		<input class="tipBtn" type="button" value="Close"/>
+    		<div class="clr"></div>
+    	</div>
+    </div>
+    <div id="mask"></div>
+     <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../js/blog.js" type="text/javascript"></script>
+<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="../css/IE7.css">
+	<div id="ms_mask"></div>
+	<div id="ms_popping">
+		<div class="ms_head">
+			<img src="../images/warn.png" class="ms_warn">
+			<h4>我们检测到您正在使用过时版本的IE浏览器，此版本的IE浏览器不被我们支持。</h4>
+			<div class="clr"></div>
+		</div>
+		<div class="ms_body">
+			<p>为了更好的浏览体验，我们推荐您使用以下新版本的现代浏览器：</p>
+			<div class="ms_introduce">
+				<a href="http://rj.baidu.com/soft/detail/14744.html?ald">
+					<div class="ms_intr">
+						<img src="../images/chromelogo.jpg"/>
+						<h4>Chrome 谷歌浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<a href="http://rj.baidu.com/soft/detail/11843.html?ald">
+					<div class="ms_intr">
+						<img src="../images/fflogo.jpg"/>
+						<h4>Firefox 火狐浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<div class="clr"></div>
+			</div>	
+		</div>
+	</div>
+<![endif]-->
+</body>
+</html>

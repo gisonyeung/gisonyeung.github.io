@@ -1,0 +1,30 @@
+@mixin sprite-1{background:url(../images/sprite/sprite-1.png) no-repeat ;}
+@mixin day-md{height:20px;width:22px;background-position:0 0;}
+@mixin day{height:28px;width:31px;background-position:0 0 -27px;}
+@mixin rest-md{height:20px;width:187px;background-position:0 0 -61px;}
+@mixin logo{height:43px;width:210px;background-position:0 0 -91px;}
+@mixin rest{height:28px;width:263px;background-position:0 0 -146px;}
+@mixin joinus-md{height:53px;width:275px;background-position:0 0 -249px;}
+@mixin joinus-active{height:75px;width:386px;background-position:0 0 -314px;}
+@mixin joinus{height:75px;width:386px;background-position:0 0 -401px;}
+@mixin message-md{height:257px;width:388px;background-position:0 0 -491px;}
+@mixin header1-md{height:100px;width:472px;background-position:0 0 -761px;}
+@mixin message{height:361px;width:546px;background-position:0 0 -873px;}
+@mixin header1{height:140px;width:664px;background-position:0 0 -1249px;}
+@mixin joinus-active-md{height:53px;width:275px;background-position:0 0 -186px;}
+
+.sprite-1{background:url(../images/sprite/sprite-1.png) no-repeat ;}
+.day-md{height:20px;width:22px;background-position:0 0;}
+.day{height:28px;width:31px;background-position:0 -27px;}
+.rest-md{height:20px;width:187px;background-position:0 -61px;}
+.logo{height:43px;width:210px;background-position:0 -91px;}
+.rest{height:28px;width:263px;background-position:0 -146px;}
+.joinus-md{height:53px;width:275px;background-position:0 -249px;}
+.joinus-active{height:75px;width:386px;background-position:0 -314px;}
+.joinus{height:75px;width:386px;background-position:0 -401px;}
+.header1-md{height:100px;width:472px;background-position:0 -761px;}
+.header1{height:140px;width:664px;background-position:0 -1249px;}
+.joinus-active-md{height:53px;width:275px;background-position:0 -186px;}
+.message{height:361px;width:539px;background-position:0 -873px;}
+.message-md{height:257px;width:384px;background-position:0 -491px;}
+

@@ -1,0 +1,95 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+  min-width: 1200px;
+  margin: 0 auto;
+  height: 556px;
+  background: url("../img/notice_banner.png") transparent no-repeat center top; }
+
+.main {
+  width: 740px;
+  margin: 0 auto; }
+.main .header {
+  margin-bottom: 23px;
+  height: 32px;
+  line-height: 32px;
+  border-bottom: 1px solid #d0d0d0; }
+.main .header .navChain {
+  line-height: 32px;
+  font-size: 12px;
+  color: #666;
+  float: right;
+  font-weight: normal; }
+.main .header .navChain a:hover {
+  text-decoration: underline; }
+.main .header .navChain em {
+  font-style: normal;
+  font-weight: normal;
+  padding: 0 8px;
+  font-family: \5b8b\4f53; }
+.main .header strong {
+  font-weight: normal;
+  font-size: 20px;
+  padding: 0 12px 0 5px; }
+.main .header .english {
+  font-family: Verdana;
+  font-size: 16px;
+  color: #adacac; }
+.main .newshead {
+  text-align: center;
+  padding-bottom: 40px; }
+.main .newshead .title {
+  font-size: 18px;
+  color: #5f442d;
+  line-height: 32px;
+  padding-bottom: 10px;
+  font-weight: normal; }
+.main .newshead .pubTime {
+  text-align: center;
+  color: #666;
+  font-size: 12px; }
+.main .newstext {
+  height: auto !important;
+  min-height: 600px;
+  padding-bottom: 40px;
+  color: #666;
+  line-height: 26px;
+  font-size: 14px;
+  padding: 0 30px;
+  padding-bottom: 100px; }
+.main .newstext p {
+  text-indent: 2em; }
+.main .newstext div.text-center {
+  text-align: center; }
+.main .newstext img {
+  max-width: 720px; }
+.main .newstext .big-photo {
+  margin-top: 25px;
+  margin-bottom: 15px; }
+.main .newstext .photo-tag {
+  text-align: center;
+  color: #AB9D60; }
+.main .newstext ul {
+  margin-left: 17px;
+  list-style: circle; }
+.main .newstext ul li {
+  list-style: circle; }
+.main .newstext ol {
+  margin-left: 17px;
+  list-style: decimal; }
+.main .newstext ol li {
+  list-style: decimal; }
+.main .newstext h1 {
+  font-size: 22px;
+  color: #5f442d;
+  line-height: 32px;
+  padding-bottom: 10px;
+  font-weight: normal; }
+.main .newstext h2 {
+  font-size: 18px;
+  color: #5f442d;
+  line-height: 32px;
+  padding-bottom: 10px;
+  font-weight: normal; }
+
+/*# sourceMappingURL=notice.css.map */

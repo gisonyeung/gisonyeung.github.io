@@ -1,0 +1,229 @@
+@mixin transition($obj: all, $time: 0.6s, $type: ease-out) {
+	transition: $obj $time $type;
+	-moz-transition: $obj $time $type;	
+	-webkit-transition: $obj $time $type;	
+	-o-transition: $obj $time $type;
+}
+@mixin transitionProperty($obj) {
+	transition-property: $obj;
+	-moz-transition-property: $obj;	
+	-webkit-transition-property: $obj;	
+	-o-transition-property: $obj;
+}
+
+
+@mixin transform($code) {
+	transform: $code;
+    -webkit-transform: $code;
+    -moz-transform: $code;
+    -o-transform: $code;
+    -ms-transform: $code;
+}
+
+
+@mixin transform-origin($code) {
+	transform-origin: $code;
+	-ms-transform-origin: $code;
+	-o-transform-origin: $code;
+	-webkit-transform-origin: $code;
+	-moz-transform-origin: $code;
+}
+
+
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: Lato, "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+body{
+	position: absolute;
+	min-width: 1200px;
+	min-height: 600px;
+	width: 100%;
+	height: 100%;
+	background-color: #eee;
+	color: #444;
+	font-family: 'Avenir Next', Microsoft Yahei;
+	font-size: 15px;
+	overflow: hidden;
+	/*-webkit-font-smoothing：none | subpixel-antialiased | antialiased
+	*none：对低像素的文本比较好
+	*subpixel-antialiased：默认值
+	*antialiased：抗锯齿
+
+	*-moz-osx-font-smoothing是mozilla给特定操作系统推出的特性增强
+	*设置grayscale对于图标字体表现更清晰，减轻次像素渲染带来的相邻像素色彩污染问题
+	*/
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	/*perspective 是 CSS3 属性，目前浏览器都不支持 perspective 属性，
+	 *Chrome 和 Safari 支持替代的 -webkit-perspective 属性。
+
+	 *perspective 属性定义 3D 元素距视图的距离，以像素计，其值越小，用户与3D空间Z平面距离越近，视觉效果更令人印象深刻；
+	 *反之，值越大，用户与3D空间Z平面距离越远，视觉效果就很小
+	 *当为元素定义 perspective 属性时，其子元素会获得透视效果，而不是元素本身，perspective 属性只影响 3D 转换元素
+	 *与 perspective-origin 属性一同使用该属性，这样您就能够改变 3D 元素的底部位置
+
+	 *perspective: number | none; 
+	 *number：元素距离视图的距离，以像素计(px 可以不写)
+	 *none：默认值，与 0 相同，不设置透视
+
+	 *在3D变形中，除了perspective属性可以激活一个3D空间之外，在3D变形的函数中的perspective()也可以激活3D空间。
+	 *他们不同的地方是：perspective用在舞台元素上（变形元素们的共同父元素）；perspective()就是用在当前变形元素上，
+	 *并且可以与其他的transform函数一起使用。例如，我们可以把：
+	 *.stage {perspective: 600px;} 写成 .stage .box {transform: perspective(600px);}
+	 *perspective()函数取值只能大于0，如果取值为0或比0小的值，将无法激活3D空间
+	 */
+	perspective: 800px;
+	-webkit-perspective: 800px;
+}
+
+
+$boxW: 275px;
+$boxH: 400px;
+$imgH: 300px;
+$textTop: 20px;
+ /* 海报样式 */
+.photo{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: $boxW;
+	height: $boxH;
+	text-align: center;
+	z-index: 1;
+	cursor: pointer;
+	@include transition(transform);
+	&:hover {
+		z-index: 8;
+	}
+	&.photo_center {
+		left: 50%;
+		top: 50%;
+		margin-top: -$boxH/2;
+		margin-left: -$boxW/2;
+	}
+	@at-root {
+		.photo-wrap {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			/*让嵌套的子元素一起发生3D翻转*/
+			transform-style: preserve-3d;
+            -webkit-transform-style: preserve-3d;
+            
+			box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+			@include transition();
+			@include transform-origin(0% 50% 0px);
+			&:hover {
+				box-shadow: 0 0 20px rgba(0, 0, 0, .3);
+			}
+			.side {
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				color: #333;
+				background-color: #fff;
+				border-radius: 3px;
+				top: 0;
+				right: 0;
+				padding: 20px;
+				box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				/*背面不可见*/
+				backface-visibility:hidden;
+                -webkit-backface-visibility:hidden;    /* Chrome 和 Safari */
+                -moz-backface-visibility:hidden;     /* Firefox */
+                -ms-backface-visibility:hidden;     /* Internet Explorer */
+				&.side-front {
+					@include transform(rotateY(0deg));
+					.image {
+						width: 100%;
+						height: $imgH;
+						overflow: hidden;
+						img {
+							width: 100%;
+							vertical-align: middle;
+						}
+					}
+					.caption {
+						color: #777;
+						text-align: center;
+						font-size: 20px;
+						margin-top: $textTop;
+						font-family: Lato, 'CDMyingbit4012dfb4a6316', "Microsoft Jhenghei", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+						@include transition(color, 0.4s);
+						&.current {
+							color: #333;
+						}
+					}
+					&:hover {
+						.caption {
+							color: #333;
+						}
+					}
+				}
+				&.side-back {
+					text-align: left;
+					@include transform(rotateY(180deg));
+					p {
+						white-break: break-all;
+						margin-bottom: 10px;
+						line-height: 20px;
+					}
+				}
+			}
+			@at-root {
+				.photo_front & {
+					@include transform(translate($boxW, 0px) rotateY(0deg));
+				}
+				.photo_back & {
+					@include transform(translate($boxW, 0px) rotateY(180deg));
+				}
+
+			}
+		}
+	}
+}
+
+.nav {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    line-height: 30px;
+    bottom: 60px;
+    z-index: 100;
+    text-align: center;
+    .i {
+    	display: inline-block;
+	    width: 30px;
+	    height: 30px;
+	    cursor: pointer;
+	    background-color: rgba(0,0,0,0.2);
+	    border-radius: 100%;
+	    text-align: center;
+	    @include transform(scale(0.5));
+	    @include transition();
+	    &.i_current {
+	    	@include transform(scale(1));
+	    	background-image: url('../img/turn.png');
+		    background-position: center center;
+		    background-repeat: no-repeat;
+	    }
+	    &.i_back {
+    	    background-color: #555;
+	    	@include transform(rotateY(180deg));
+	    }
+
+    }
+}
+
+@media screen and (max-width: 1366px) {
+	.nav {
+		bottom: 15px;
+	}
+}
+
+

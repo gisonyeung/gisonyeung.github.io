@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="wechatApp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>消息中心</title>
+    <meta name="keywords>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</script>
+</head>
+<body ng-controller="appController" ng-click="appClick()">
+    <div ui-view class="animate-container-view"></div>
+    <div id="tipPanel" ng-show="tipShow" class="animate-tip" ng-controller="tipController">
+        <div class="tip_overlay" ng-click="closeTip()"></div>
+        <div class="tip_content">
+            <div class="tip_hd">
+                <h3 class="title">消息提示</h3>
+            </div>
+            <div class="tip_bd">
+                <p ng-bind="tipText"></p>
+            </div>
+            <div class="tip_ft">
+                <a href="javascript:" class="tip_button" ng-click="closeTip()">关闭</a>
+            </div>
+            <div class="tip_close ng_close" ng-click="closeTip()"></div>
+        </div>
+    </div>
+    <div id="dataPanel" class="animate-tip" ng-controller="dataController" person-data-directive ng-if="getDataPanel" ng-show="isDataShow" ng-click="hideInput()">
+    </div>
+    <script src="../framework/angular.js" type="text/javascript"></script>
+    <script src="../framework/angular-animate.js" type="text/javascript"></script>
+    <script src="../framework/angular-cookies.js" type="text/javascript"></script>
+    <script src="../framework/angular-ui-router.js" type="text/javascript"></script>
+    <script src="../js/app.js" type="text/javascript"></script>
+    <script src="../js/controller.js" type="text/javascript"></script>
+    <script src="../js/service.js" type="text/javascript"></script>
+    <script src="../js/directive.js" type="text/javascript"></script>
+    <script src="../js/filters.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+pre.prettyprint {
+	border: 0;
+	border-left: 3px solid #61C3B3;
+	margin-left: 2em;
+	padding: 0.5em;
+	font-size: 13px;
+	display: block;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+	margin: 1em 0px;
+	white-space: pre;
+}

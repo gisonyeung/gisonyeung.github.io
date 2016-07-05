@@ -1,0 +1,653 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>2014研发中心前端考核二期</title>
+	<meta charset="utf-8" />
+</head>
+<style>
+/*清除浏览器样式*/
+body{background: URL('../images/bg.png');font-family:'微软雅黑';font-size:16px}
+p{margin-left:15px;}
+a{color:#ffffff;text-decoration:none;}
+ul,li{padding:0;margin:0;}
+li{display:block;list-style-type: none;}
+h1{font-size: 200%;margin: 20px 0 0 0;color:#FFB848}
+h2{font-size: 180%;margin: 80px 0 0 0;color:#FFB848}
+h3{font-size: 150%;margin: 50px 0 0 0;font-weight: normal;color:#FFDEAA;}
+h4{border-left-width: 5px;border-left-style: solid;border-left-color: #9B5F00;padding: 0 0 0 10px;}
+blockquote{margin:0 0 0 20px;}
+/*常用样式*/
+.bc{margin:0 auto;}
+.fl{float:left;}
+.cb{clear:both;}
+.w960{width:960px;}
+.tc{text-align:center;}
+.code{
+	border: solid 1px #3C3A3A;
+	padding: 20px;
+	border-radius: 5px;
+	margin: 0 40px;
+	background:#272822;
+}
+.c-prink{color:#f92672}
+.c-grey{color:#6D6D6D;}
+/*特殊样式*/
+/*主体*/
+.main-box-height{min-height:80%}
+.main-box{
+	margin:50px auto 0;
+	width:960px;
+	padding:0px;
+	border-radius:10px;
+	color:#ffffff;
+}
+/*左侧边栏*/
+.left-bar{
+	background:#9B5F00;
+	border-radius:10px 0 0 10px;
+	width:250px;
+	position: fixed !important;
+	position: static;
+	margin-left: 0px;
+	max-height:80%;
+	overflow-y:auto; 
+}
+.left-bar .c-prink{color:#FF6464}
+.left-bar .nav li{}
+
+.left-bar .nav li .H2{
+	display: block;
+	font-weight: bolder;
+	font-size: 120%;
+	padding: 10px 15px;
+
+	/*
+	border-bottom: solid 1px #643D00;
+	border-top: solid 1px #8E5700;*/
+	/*border-bottom: solid 2px #7B4D04;*/
+}
+.left-bar .nav li .H3{
+	display: block;
+	padding: 3px 0px 3px 33px;
+	background-color: #7B4D04;/*
+	border-bottom: solid 1px #643D00;
+	border-top: solid 1px #8E5700;*/
+	/*border-bottom: solid 1px #482D02;*/
+}
+.left-bar .nav li:first-child a{
+	border-radius:10px 0 0 0;
+}
+.left-bar .nav li a:hover{
+	background: #482D02;
+}
+.left-bar .nav li .H3:hover{
+	background: #482D02;
+}
+.left-bar .nav .method-name{
+	/*display:block;*/
+	font-size:60%;
+	font-weight: bolder;
+	color:#AD874A;
+	/*border-left: solid 3px #AD874A;*/
+	margin-top:3px;
+	padding-left: 5px;
+}
+/*右侧主体*/
+.content{
+	background:#140D03 ;
+	background:rgba(0, 0, 0, 0.78);
+	width:650px;
+	border-radius:0 10px 10px 0;
+	padding:0 30px 150px;
+}
+.content .method-name{
+	font-size: 80%;
+	font-weight: bolder;
+	color:#ffffff;
+	margin-left:10px;
+}
+.right-bar{
+	padding-left: 250px !important;
+	padding-left: 0px;
+}
+</style>
+<body>
+	<div class="main-box main-box-height">
+		<div id="js-left-bar" class="left-bar fl main-box-height">
+			<ul class="pt nav">
+
+			</ul>
+		</div>
+		<div class="right-bar">
+		<div id="main-box" class="content  fl main-box-height">
+
+			<h1>欢迎使用网页微信API</h1>
+			<h2 class="anchor">概述</h2>
+			<p>
+				本api提供简单模拟微信网页版包括用户登录、添加好友、聊天等功能，仅供广东工业大学研发中心前端考核使用。页面中部分素材源自网络，请不要用于商业用途。 <br/>
+
+			</p>
+			<p>
+				当前版本：bata 0.2
+			</p>
+
+			<h3 class="anchor">接口的形式</h3>
+			<p>接口一般由三部分组成，分别是域名、模块名称和接口名称</p>
+			<div class="code tc"><span class="c-prink"> &lt;项目地址&gt;</span>?action=<span class="c-prink">&lt;模块名&gt;</span>&method=<span class="c-prink">&lt;接口名&gt;</span></div>
+
+			<h4>域名</h4>
+			<p>域名就是项目地址，你可以简单的看作是这个页面的地址。它可能是</p>
+			<div class="code tc">http://cheewp.duapp.com/WeChat/</div>
+			<p>注意，由于项目地址可能会发生变动，所以建议大家用一个字符串来保存项目的地址。</p>
+
+			<h4>模块名称</h4>
+			<p>为了更好的区分各个接口，人为的将接口划分成了多个模块，如用户模块、好友模块、聊天模块等。模块名称就是他们的名称。原则上不区分大小写，但是请保证大小写一致。</p><p>模块名会包含在URL参数中，以action命名，如</p>
+			<div class="code tc">&lt;项目地址&gt;</span>?action=<span class="c-prink">&lt;模块名&gt;</span></div>
+			<p>当然啦，如果不填的话，模块名默认是index，也就是你现在看到的页面，实际上是</p>
+			<div class="code tc">&lt;项目地址&gt;</span>?action=<span class="c-prink">Index</span></div>
+
+			<h3 class="anchor">需要用到的知识</h3>
+			<p>在使用本接口之前，你需要掌握一些预备知识，他们包括http post、json、ajax等。 当然啦，为了应用好他们，你还需要学习javascript和jQuery。另外，如果能够了解session和cookie的话就更好啦，不排除哪天我会问你们哟。 这里会对上述知识做简单介绍，更多的内容需要大家自己　　上网找资料学习。</p>
+			<p>本次考核中，多数的接口使用方式都是采用前端post参数给后台，后台返回json对象的形式。</p>
+
+			<h4>HTTP POST协议</h4>
+			<p>在http协议里面最常使用两种传递参数的方式，他们分别是get和post。相比较而言，get比较方便，可以应对一些参数比较少、值比较短的情况。post比较安全，可以应对一些对安全性比较高的场合。在本次考核中，大部分的参数都会用post来提交。 不过有时候post和get其实是混合在一起使用的 :p</p>
+			<p>常见的提交post参数的方式主要有两种，一种是将表单(form)标签中的method属性设置成post，另一种则是通过jQuery或js进行提交。 在实际应用中，采用较早版本的jQuery可能会出现中文乱码的情况。</p>
+
+			<h4>JSON对象</h4>
+			<p>json对象是javascript世界中用来传递数据的一种字符串。这次考核中的接口大多都会返回一个json字符串，你需要自己想办法解析这个字符串，达到显示的目的。 因此，你需要学习如何解析json字符串。</p>
+
+			<h4>Ajax加载</h4>
+			<p>Ajax是异步加载页面的简称。 例如我们访问新浪微博就会发现，网页里面的内容并不是在一开始就被加载出来的。 而是等页面的架构全部就位之后才逐渐加载的。 这种分多次加载页面的展示方式就是异步加载。 为了实现这个功能，你可能需要学习如何用javascript实现ajax（w3school上有相关的介绍），如果实在受不了的话可以使用jQuery。</p>
+			<h3 class="anchor">注意 </h3>
+				<p>
+					如果发现没办法保持登录状态，请在post数据之前添加下面的代码
+					<div class="code">
+						$.ajaxSetup({
+						    xhrFields: {
+						       withCredentials: true
+						    },
+						    crossDomain: true
+						});
+					</div>
+				</p>
+			<h2 class="anchor">用户相关的接口</h2>
+			<p>用户是一个聊天工具最核心的组成部分。这里将会提供包括注册、登录、修改用户信息等相关接口。</p>
+			<p>所有用户相关的接口都遵循以下面的url格式<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=&lt;接口名&gt;</div></p>
+			<p>例如，登录的接口为<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">login</span></div></p>
+
+
+			<h3 class="">注册</h3>
+			<p>注册接口暂不开放</p>
+
+			<h3 class="anchor">登录<span class="method-name">login</span></h3>
+			<p>用于登录的接口。所有接口中，有相当一部分接口都是需要用户登录之后才可以正常使用的。当用户登录以后，服务器会记住用户的登录状态。</p>
+			<p>登陆后，如果长时间没有进行操作，服务器会认为用户已经下线。你可以通过下面的（checkIsLogin）接口检查自己现在还在不在线。同样的你也可以通过下线接口（logout）来主动下线。
+				<h4>接口地址</h4>
+				<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">login</span></div>
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+						{<blockquote>
+						username:'admin',<span class="c-grey">//字符串，用户名</span><br>
+						password:'admin'<span class="c-grey">//字符串，密码</span></blockquote>
+						}
+					</div>
+				</p>
+				<h4>返回参数</h4>
+				
+				<p>调用成功，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"success",<span class="c-grey">//字符串，表示成功状态，下同</span><br>
+					"userid":"1" <span class="c-grey">//字符串，服务器会返回用户的id，类似于QQ号</span></blockquote>
+					} 
+				</div></p><p>
+				调用失败，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+					"error":"password not set"<span class="c-grey">//字符串，提示信息，如未设置密码</span></blockquote>
+					} 
+				</div></p>
+			</p>
+
+			<h3 class="anchor">检查登录状态<span class="method-name">checkIsLogin</span></h3>
+			<p>用于检查登录状态的接口.
+				<h4>接口地址</h4>
+				<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">checkIsLogin</span></div>
+				
+				<h4>请求参数</h4>
+				<p>
+					无
+				</p>
+				<h4>返回参数</h4>
+				
+				<p>如果目前处于登录状态，返回
+				<div class="code">
+					{<blockquote>
+					"statue":"success"<br>
+					</blockquote>
+					} 
+				</div>
+				</p>
+				<p>
+				如果已经处于登出状态，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"error",<br>
+					"error":"unlog"</blockquote>
+					} 
+				</div></p>
+			</p>
+
+			<h3 class="anchor">下线，登出<span class="method-name">logout</span></h3>
+			<p>用于下线的接口。
+				<h4>接口地址</h4>
+				<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">logout</span></div>
+				<h4>请求参数</h4>
+				<p>
+					无
+				</p>
+				<h4>返回参数</h4>
+				
+				<p>只返回一句
+				<div class="code">
+					{<blockquote>
+					"statue":"success"
+					</blockquote>
+					} 
+				</div>
+				</p>
+			</p>
+
+			<h3 class="anchor">修改信息<span class="method-name">update</span></h3>
+			<p>用于修改自己的用户信息的接口。修改后可以调用获取用户信息getUserById借口进行检查。</p>
+			<p>
+				<h4>接口地址</h4>
+				<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">update</span></div>
+				
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+						{<blockquote>
+							nickname,<span class="c-grey">//字符串，用户的昵称</span><br/>
+							age,<span class="c-grey">//整型，用户的年龄</span><br/>
+							sex,<span class="c-grey">//单个字符，用户的性别用“男”“女”表示</span><br/>
+							introduction,<span class="c-grey">//字符串，用户的自我介绍</span><br/>
+							email,<span class="c-grey">//字符串，用户的email</span>
+							</blockquote>
+						}
+					</div>
+				</p>
+				<h4>返回参数</h4>
+				
+				<p>调用成功，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"success"<span class="c-grey">//字符串，表示成功状态，下同</span>
+					</blockquote>
+					} 
+				</div></p><p>
+				调用失败，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+					"error":"password not set"<span class="c-grey">//字符串，提示信息，如未设置密码</span>
+					</blockquote>
+					} 
+				</div></p>
+			</p>
+			<h3 class="anchor">获取用户信息<span class="method-name">getUserById</span></h3>
+			<p>用于获取用户信息的接口。类似于使用QQ号码访问用户的信息。</p>
+			<p>
+				<h4>接口地址</h4>
+				<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">User</span>&method=<span class="c-prink">getUserById</span></div>
+				
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+						{
+						<blockquote>
+							userid:'1'<span class="c-grey">//字符串，用户的帐号，类似与QQ号</span>
+						</blockquote>
+						}
+					</div>
+				</p>
+				<h4>返回参数</h4>
+				
+				<p>调用成功，则返回
+				<div class="code">
+					{<blockquote>
+					"age": 50,<span class="c-grey">//整型，用户的年龄</span><br>
+					"email": "123@qq.com",<span class="c-grey">//字符串，用户的email</span><br>
+					"introduction": "我是王尼玛",<span class="c-grey">//字符串，用户设置的自我介绍</span><br>
+					"nickName": "群主",<span class="c-grey">//字符串，用户的昵称</span><br>
+					"sex": "",<span class="c-grey">//单个字符，用户的性别</span><br>
+					"userId": "1",<span class="c-grey">//字符串，用户的id，类似于QQ号</span>
+					</blockquote>
+					} 
+				</div></p><p>
+				调用失败，则返回
+				<div class="code">
+					{<blockquote>
+					"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+					"error":"password not set"<span class="c-grey">//字符串，提示信息，如未设置密码</span>
+					</blockquote>
+					} 
+				</div></p>
+			</p>
+
+			<h2 class="anchor">好友相关的接口</h2>
+			<p>好友关系是聊天系统中的重要关系。这里提供了获取好友列表、获取添加好友请求列表、添加查找好友等相关接口</p>
+			<p>所有好友相关的接口都遵循以下面的url格式<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">Friend</span>&method=&lt;接口名&gt;</div></p>
+			<p>例如，获取好友列表的接口为<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">Friend</span>&method=<span class="c-prink">getFriendsList</span></div></p>
+			
+
+			<h3 class="anchor">获取好友列表<span class="method-name">getFriendsList</span></h3>
+			<p>
+				<p>当用户登录了聊天工具之后，首先希望看到的就是好友列表啦。所以建议在登录完成之后调用一次这个接口。</p>
+				<p>需要注意的是，这个接口返回的数据是一个数组而不是前面说的对象。</p>
+				<p>另外由于这个接口返回的数据比较少（只有好友的id和备注名），所以你还要通过其他的接口（如getUserById）获取一下用户的其它信息。</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Friend</span>&method=<span class="c-prink">getFriendsList</span>
+				</div>
+
+			<h4>请求参数</h4><p>无</p>
+			<h4>返回参数</h4><p>
+			<p>调用成功，则返回一个包含好友id和好友备注的json数组
+				<div class="code">
+					[
+					 <blockquote>
+					 	{
+					 		<blockquote>"userid":"2db72f3e46",<span class="c-grey">//字符串，用户的id，类似于QQ号</span><br>
+					 			"remark":null<span class="c-grey">//字符串，你给这个用户标记的备注，null代表没有备注</span></blockquote>
+					 	},
+					 </blockquote>					 
+					 <blockquote>
+					 	{
+					 		<blockquote>"userid":"asdjelncke",<span class="c-grey">//字符串，用户的id，类似于QQ号</span><br>
+					 			"remark":"师兄疯了"<span class="c-grey">//字符串，你给这个用户标记的备注</span></blockquote>
+					 	}
+					 </blockquote>
+					]
+				</div></p><p>
+				调用失败，则返回
+				<div class="code">
+					{ 
+					<blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+					</blockquote>
+					} 
+				</div></p>
+			</p>
+
+
+			</p><h3 class="anchor">修改好友备注名<span class="method-name">setRemark</span></h3>
+			<p>
+				<p>可以修改好友的备注信息。</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Friend</span>&method=<span class="c-prink">setRemark</span>
+				</div>
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+							{ 
+							<blockquote>
+							userid:"1",<span class="c-grey">//字符串，表示你要给哪个好友设置备注</span><br>
+							remark:"师兄疯了"<span class="c-grey">//字符串，表示你要给他备注的名称，不要超过8个字</span>
+							</blockquote>
+							} 
+					</div>
+				</p>
+				<h4>返回参数</h4><p>
+				<p>调用成功，则返回成功提示
+					<div class="code">
+						{<blockquote>
+						"statue":"success"<span class="c-grey">//字符串，表示成功状态，下同</span>
+						</blockquote>
+						} 
+					</div>
+				</p>
+				<p>
+					调用失败，则返回错误提示
+					<div class="code">
+						{ <blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+						</blockquote>
+						} 
+					</div></p>
+				</p>
+			</p>
+
+			<!-- <h3>获取好友详细资料</h3>
+			<p></p>			
+
+			<h3>获取好友请求列表</h3>
+			<p></p>
+
+			<h3>查找好友</h3>
+			<p></p>
+
+			<h3>添加好友</h3>
+			<p></p> -->
+			<!-- 
+			<h2 class="anchor">消息相关的接口</h2>
+			<p>收发消息是聊天工具最重要的功能。这里提供了获取和发送消息的接口。</p> -->
+ 
+			<h2 class="anchor">消息相关的接口<span class="c-prink">（New）</span></h2>
+			<p>收发消息是聊天工具最重要的功能。这里提供了发送消息和获取新消息的接口。</p>
+			<p>所有消息相关的接口都遵循以下面的url格式<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=&lt;接口名&gt;</div></p>
+			<p>例如，像某个用户发送消息的接口为<div class="code tc">&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=<span class="c-prink">sendTo</span></div></p>
+			
+			</p><h3 class="anchor">发送消息<span class="method-name">sendTo</span></h3>
+			<p>
+				<p>向某个好友发送消息</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=<span class="c-prink">sendTo</span>
+				</div>
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+							{ 
+							<blockquote>
+							userid:"1",<span class="c-grey">//字符串，表示你要给哪个好友发送消息</span><br>
+							content:"终于写好发送消息的接口啦？"<span class="c-grey">//字符串，消息内容</span>
+							</blockquote>
+							} 
+					</div>
+				</p>
+				<h4>返回参数</h4><p>
+				<p>调用成功，则返回成功提示
+					<div class="code">
+						{<blockquote>
+						"statue":"success"<span class="c-grey">//字符串，表示成功状态，下同</span>
+						</blockquote>
+						} 
+					</div>
+				</p>
+				<p>
+					调用失败，则返回错误提示
+					<div class="code">
+						{ <blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+						</blockquote>
+						} 
+					</div></p>
+				</p>
+			</p>
+
+
+			
+			</p><h3 class="anchor">有无新信息<span class="method-name">getUnreadUserId</span></h3>
+			<p>
+				<p>查询未读信息，并返回未读信息都来自哪些好友。</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=<span class="c-prink">getUnreadUserId</span>
+				</div>
+				<h4>请求参数</h4>
+				<p>
+					无
+				</p>
+				<h4>返回参数</h4><p>
+				<p>调用成功，则返回一个json数组，其中的字符串代表未读信息发送者的id。如果没有未读消息，会返回一个空数组
+					<div class="code">
+						[<blockquote>
+						"2db72f3e46"<span class="c-grey">//字符串，用户id</span>
+						</blockquote>
+						]
+					</div>
+				</p>
+				<p>
+					调用失败，则返回错误提示
+					<div class="code">
+						{ <blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+						</blockquote>
+						} 
+					</div></p>
+				</p>
+			</p>
+
+
+
+
+
+
+			</p><h3 class="anchor">未读消息<span class="method-name">getUnreadByUserId</span></h3>
+			<p>
+				<p>获取来自某个用户的未读消息</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=<span class="c-prink">getUnreadByUserId</span>
+				</div>
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+							{ 
+							<blockquote>
+							userid:"1",<span class="c-grey">//字符串，表示你要获取谁发给你的未读消息</span><br>
+							</blockquote>
+							} 
+					</div>
+				</p>
+				<h4>返回参数</h4><p>
+				<p>调用成功，则返回一个json数组，其中的每个元素代表一个消息。如果没有未读消息，会返回一个空数组
+					<div class="code">
+						[<blockquote>
+							{<blockquote>
+								"fromUserId":"1",<span class="c-grey">//字符串，消息的发信人</span><br>
+								"toUserId"  :"1",<span class="c-grey">//字符串，消息的接收者</span><br>
+								"content"   :"1",<span class="c-grey">//字符串，消息的内容</span><br>
+								"time"      :"1",<span class="c-grey">//字符串，消息发送的时间</span><br>
+
+							</blockquote>
+							},<br>
+							{<blockquote>
+								"fromUserId":"1",<span class="c-grey">//字符串，消息的发信人</span><br>
+								"toUserId"  :"1",<span class="c-grey">//字符串，消息的接收者</span><br>
+								"content"   :"1",<span class="c-grey">//字符串，消息的内容</span><br>
+								"time"      :"1",<span class="c-grey">//字符串，消息发送的时间</span><br>
+
+							</blockquote>
+							}
+						</blockquote>
+						]
+					</div>
+				</p>
+				<p>
+					调用失败，则返回错误提示
+					<div class="code">
+						{ <blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+						</blockquote>
+						} 
+					</div></p>
+				</p>
+			</p>
+
+
+			</p><h3 class="anchor">最近消息<span class="method-name">getRecentByUserId</span></h3>
+			<p>
+				<p>取得某位用户和你最近的聊天记录，获取消息上限为20条</p>
+				<h4>接口地址</h4>
+				<div class="code tc">
+					&lt;项目地址&gt;?action=<span class="c-prink">Message</span>&method=<span class="c-prink">getRecentByUserId</span>
+				</div>
+				<h4>请求参数</h4>
+				<p>
+					<div class="code">
+							{ 
+							<blockquote>
+							userid:"1",<span class="c-grey">//字符串，表示你要获取谁发给你的未读消息</span><br>
+							number:15,<span class="c-grey">//数字。你要查询多少条未读消息。上限是20</span>
+							</blockquote>
+							} 
+					</div>
+				</p>
+				<h4>返回参数</h4><p>
+				<p>调用成功，则返回一个json数组，其中的每个元素代表一个消息。如果没有未读消息，会返回一个空数组
+					<div class="code">
+						[<blockquote>
+							{<blockquote>
+								"fromUserId":"1",<span class="c-grey">//字符串，消息的发信人</span><br>
+								"toUserId"  :"1",<span class="c-grey">//字符串，消息的接收者</span><br>
+								"content"   :"1",<span class="c-grey">//字符串，消息的内容</span><br>
+								"time"      :"1",<span class="c-grey">//字符串，消息发送的时间</span><br>
+
+							</blockquote>
+							},<br>
+							{<blockquote>
+								"fromUserId":"1",<span class="c-grey">//字符串，消息的发信人</span><br>
+								"toUserId"  :"1",<span class="c-grey">//字符串，消息的接收者</span><br>
+								"content"   :"1",<span class="c-grey">//字符串，消息的内容</span><br>
+								"time"      :"1",<span class="c-grey">//字符串，消息发送的时间</span><br>
+
+							</blockquote>
+							}
+						</blockquote>
+						]
+					</div>
+				</p>
+				<p>
+					调用失败，则返回错误提示
+					<div class="code">
+						{ <blockquote>
+						"statue":"error",<span class="c-grey">//字符串，表示失败状态，下同</span><br>
+						"error":"unlog"<span class="c-grey">//字符串，提示信息，如未登录</span>
+						</blockquote>
+						} 
+					</div></p>
+				</p>
+			</p>
+
+
+		</div>
+		</div>
+	</div>
+	<div class="cb"></div>
+<body>
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.2.min.js"></script> -->
+<script src="../script/jquery-1.10.2.min.js"></script>
+<script>
+$(document).ready(function(){
+	var index = 0;
+	var leftBarUl = $("#js-left-bar ul");//保留引用，减小dom查询带来的开销
+	$("#main-box .anchor").each(function(){
+		var title = $(this).html();
+		leftBarUl.append("<li><a class=\""+ $(this)[0].tagName +"\" href=\"#anchor"+index+"\">"+title+"</a></li>");
+		$(this).attr("id","anchor"+index);
+		index++;
+	});
+});
+</script>
+</html>

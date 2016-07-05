@@ -1,0 +1,18 @@
+<div class="logo">
+    <i class="web_wechat_login_logo"></i>
+</div>
+<div class="login_box" ng-controller="loginController">
+    <p class="login_title">登陆网页版微信</p>
+    <div class="login_bar">
+        <img src="../images/login-yonghu.png" draggable="false" class="login_bar_logo">
+        <input type="text" class="login_input" ng-model="user.username"  set-focus id="username" ng-keypress="keypress($event)">
+    </div>
+    <div class="login_bar">
+        <img src="../images/login-mima.png" draggable="false" class="login_bar_logo">
+        <input type="password" class="login_input" ng-model="user.password" id="password" ng-keypress="keypress($event)">
+    </div>
+    <label class="login_checkbox">
+        <input type="checkbox" ng-model="user.isRemember"><span> 记住密码</span>
+    </label>
+    <button class="login_botton" ng-click="goLogin()">登陆</button>
+</div>

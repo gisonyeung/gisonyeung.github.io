@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images/sprite" ImageName="sprite-1" IsPhone="false" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="day-md.png" LocationX="0" LocationY="3" />
+    <Sprite Path="day.png" LocationX="0" LocationY="30" />
+    <Sprite Path="rest-md.png" LocationX="0" LocationY="64" />
+    <Sprite Path="logo.png" LocationX="0" LocationY="94" />
+    <Sprite Path="rest.png" LocationX="0" LocationY="149" />
+    <Sprite Path="joinus-md.png" LocationX="0" LocationY="252" />
+    <Sprite Path="joinus-active.png" LocationX="0" LocationY="317" />
+    <Sprite Path="joinus.png" LocationX="0" LocationY="404" />
+    <Sprite Path="header1-md.png" LocationX="0" LocationY="764" />
+    <Sprite Path="header1.png" LocationX="0" LocationY="1252" />
+    <Sprite Path="joinus-active-md.png" LocationX="0" LocationY="189" />
+    <Sprite Path="message.png" LocationX="0" LocationY="876" />
+    <Sprite Path="message-md.png" LocationX="0" LocationY="494" />
+  </SpriteList>
+</SpriteFile>

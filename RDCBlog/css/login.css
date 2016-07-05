@@ -1,0 +1,209 @@
+
+*{
+	padding:0px;
+	border:none;
+	margin: 0 auto;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+body{
+	position:absolute;
+    top: 0px;
+    left: 0px;
+    width:100%;
+	height:100%;
+    text-align: center;
+    background-image:url(../images/loginbg1.jpg);
+    background-size: 1360px auto;
+    -webkit-background-size: 1360px auto;
+    -moz-background-size: 1360px auto; /* 老版本的 Firefox */
+    background-repeat:repeat;
+    background-position: 50% 0%;
+}
+a{text-decoration:none;}
+ul{list-style:none;}
+img{border:0;}
+input{outline: medium;}
+
+/*--------login-----------*/
+.logo{
+	position: absolute;
+	left: 20px;
+	top: 10px;
+}
+#login{
+	display: block;
+	width: 221px;
+	height: 176px;
+	margin-top: 243px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}
+.name,.pwd{
+	color: #36b6a1;
+}
+
+input.placeholder{
+	color: #a9a9a9;
+}
+.inputPack span{
+	color: #a9a9a9;
+}
+.name,.pwd,.submit{
+	width: 175px;
+	padding: 17px 0;
+	margin-bottom: 5px;
+	border-radius: 2px;
+	font-size: 10px;
+
+}
+.name,.pwd{
+	border-left: 6px solid #FFFFFF; 
+	padding-left: 40px;
+	vertical-align: middle;
+}
+.submit{
+	text-align: center;
+	color: white;
+	margin-top: 12px;
+	cursor: pointer;
+	width: 221px;
+	transition: background-color 0.2s ease-in-out;
+	-webkit-transition: background-color 0.2s ease-in-out;
+}
+
+.submit{
+	background-color: #36b6a1;
+}
+.submit:hover{
+    background-color: #359F8E;
+}
+
+.submit:active{
+	box-shadow: inset 0 1px 20px rgba(0,0,0,0.075);
+	/*border:2px outset #B64A4A;*/
+}
+
+.inputPack{
+	position: relative;
+}
+
+.iconPst{
+	position: absolute;
+	top: 14px;left:20px; 
+	margin-top: 2px;
+}
+#findPwd{
+	text-decoration: underline;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+}
+#findPwd:visited{
+    color: white;
+}
+#findPwd:hover{
+    color: #36b6a1;
+    text-decoration: none;
+}
+/*--------通用弹框--------*/
+#tipBox{
+	display: none;
+	width: 90%;
+	max-width: 480px;
+	background-color: #FFFFFF;
+	border-radius: 5px;
+	position: absolute;
+	top: -30px;
+	z-index: 99;
+	opacity: 0;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+	/*margin: 0 20px;*/
+}
+.tipHead{
+	border-bottom: 1px solid #d3d3d3;
+	padding: 12px 20px;
+}
+.tipHead p{
+	display: block;
+	float: left;
+	margin: 0px;
+	margin-top: 4px;
+	font-weight: bold;
+	font-size: 15px;
+	color: #70b5aa;
+	font-family: arial;
+}
+.tipHead span{
+	display: block;
+	float: right;
+	margin: 0px;
+	color: #d3d3d3;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	font-size: 13px;
+	cursor: pointer;
+}
+.tipHead span:hover{
+	color: #70b5aa;
+}
+.tipContent{
+	border-bottom: 1px solid #d3d3d3;
+	text-align: left;
+	padding: 14px 22px;
+	min-height: 56px;
+}
+.tipContent p{
+	display: block;
+    font-size: 13px;
+    color: #405955;
+}
+.clr{
+	clear: both;
+}
+.tipFoot{
+	padding: 23px 20px 9px 22px;
+}
+.tipBtn{
+	background-color: #70b5aa;
+	border-radius: 3px;
+	color: #FFFFFF;
+	float: right;
+	cursor: pointer;
+	padding: 8px 22px;
+	font-size: 13px;
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+}	
+.tipBtn:hover
+{
+	background-color: #63ab9f;
+}
+.tipBtn:active
+{
+	box-shadow: inset 0 2px 20px rgba(0,0,0,0.3);
+}
+#mask{
+	display: none;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.3;
+	background-color: black;
+	filter: "alpha(opacity=30)";
+	filter:alpha(opacity=30);
+	z-index: 9;
+}
+
+
+@media screen and (min-width: 1366px){
+	body{
+		background-size: cover;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover; /* 老版本的 Firefox */
+	}
+}
+

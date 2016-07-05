@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<title>巅峰仙侣</title>
+	<link rel="stylesheet" href="./css/updateRegister.css">
+</head>
+<body>
+	<div id="wrap">
+		<div class="tab fixed">
+			<a href="./updateRegister.html" class="user_tab">巅峰仙侣注册</a>
+			<a href="./updatePwd.html" class="user_tab active">密码修改</a>
+			<a href="javascript:;" class="user_tab disable">密码找回</a>
+			<div class="clear"></div>
+		</div>
+		<div class="content">
+			<div>
+				<form action="http://58.221.49.71:85/password.php" method="POST" name="regForm">
+					<div class="inputPack">
+						<span class="icon icon-user"></span>
+						<input type="text" class="regBox reg" id="username" name="username" placeholder="游戏帐号">
+						<span class="tipText">帐号: 6-15个字符(限英文和数字)</span>
+					</div>
+					<div class="inputPack">
+						<span class="icon icon-password"></span>
+						<input type="password" class="regBox reg" id="password" name="password" placeholder="旧密码">
+						<span class="tipText">请输入你的旧密码</span>
+					</div>
+					<div class="inputPack">
+						<span class="icon icon-password"></span>
+						<input type="password" class="regBox reg" id="repassword" name="repassword" placeholder="确认密码">
+						<span class="tipText">新密码: 6-16个字符，限字母数字下划线</span>
+					</div>
+					<div class="inputPack">
+						<span class="icon icon-password"></span>
+						<input type="password" class="regBox reg" id="repassword" name="repassword2" placeholder="确认密码">
+						<span class="tipText">请再次输入您的密码</span>
+					</div>
+					<button type="submit" class="btn" id="doReg">修改密码</button>
+				</form>
+			</div>
+		</div>	
+</body>
+</html>

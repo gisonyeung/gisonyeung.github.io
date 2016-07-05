@@ -1,0 +1,55 @@
+<div id="chatArea" class="box chat chatRoom">
+    <div class="box_hd">
+        <div id="chatRoomMembersWrap"></div>
+        <div class="title_wrap">
+            <div class="title poi">
+                <a class="title_name">{{current.chatPerson.name}}</a>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-wrapper box_bd chat_bd scrollbar-dynamic">
+        <div class="box_bd chat_bd scrollbar-dynamic scroll-content scroll-scrolly_visible" id="chatContentPanel">
+            <div ng-if="chatContent.length < 1" class="message_empty ng-scope">
+                <i class="web_wechat_nomes_icon" ng-hide="chatContent.length < 1 && current.chatPerson"></i>
+                <p ng-show="chatContent.length < 1 && 
+                current.chatPerson" class="ng-hide">暂时没有新消息</p>
+                <p ng-hide="current.chatPerson">未选择聊天</p>
+             </div>
+            <div ng-if="chatContent.length >= 1">
+                <div ng-repeat="message in chatContent track by $index">
+                    <div class="clearfix">
+                        <div class="message" ng-class="{'you': message.fromUserId==current.chatPerson.userid,'me': message.fromUserId!=current.chatPerson.userid}">
+                            <p class="message_system"><span class="content">{{message.time}}</span></p>
+                            <img src="../images/myhead.jpg" class="avatar" title="惜有">
+                            <div class="content">
+                                <div class="bubble js_message_bubble" ng-class="{'bubble_default left': message.fromUserId==current.chatPerson.userid,'bubble_primary right': message.fromUserId!=current.chatPerson.userid}">
+                                    <div class="bubble_cont">
+                                        <div class="plain">
+                                            <pre class="js_message_plain" ng-bind-html="message.content | trustHtml"></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box_ft" ng-if="current.chatPerson"  ng-controller="chatSenderController" send-message-directive>
+        <div class="toolbar" id="tool_bar">
+            <a class="web_wechat_face" href="javascript:;" title="表情" ng-click="openEmojiPanel($event)"></a>
+        </div>
+        <div id="mmpop_emoji_panel" class="mmpop slide-top animate-emoji" emoji-panel-directive ng-if="isEmojiShow" ng-click="emojiPanelClick($event)">
+        </div>
+        <div class="content">
+            <pre id="editArea" class="flex edit_area" contenteditable="true" contenteditable-directive ng-keyup="editAreaKeyup()" ng-blur="editAreaBlur()" ng-keydown="editAreaKeydown($event)" ng-model="editAreaCtn" ng-mouseup="editAreaMouseup()" ng-mousedown="editAreaMousedown()"></pre>
+            <!-- <pre id="editArea" class="flex edit_area" contenteditable="true" contenteditable-directive ng-model="editAreaCtn"></pre> -->
+            <span class="caret_pos_helper" id="caretPosHelper"></span>
+        </div>
+        <div class="action">
+            <span class="desc">按下Ctrl+Enter换行{{fuck}}</span>
+            <a class="btn btn_send" href="javascript:;" ng-click="send()">发送</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+body.ke-content{
+	padding: 10px 0 0 0;
+}
+form div.ke-container-simple{
+	margin: 0 auto;
+	border: none;
+}
+div.ke-container-simple .ke-toolbar{
+	padding: 19px 0 15px 0;
+	border: none;
+}
+div.ke-container-simple .ke-statusbar{
+	border: none;
+	/*background-color: #000;*/
+	position: absolute;
+	width: 1100px;
+	left: 0;
+	bottom: 0;
+}
+span.ke-statusbar-center-icon{
+	background-image: none;
+}
+div.ke-statusbar{
+	/*border: none;*/
+}
+iframe.ke-edit-iframe,div.ke-edit{
+	min-height: 600px;
+}
+pre.prettyprint {
+	border: 0;
+	border-left: 3px solid #61C3B3;
+	margin-left: 2em;
+	padding: 0.5em;
+	font-size: 13px;
+	display: block;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+	margin: 1em 0px;
+	white-space: pre;
+}
+.ke-content ul,
+.ke-content ol{
+	border-left: 5px solid #555;
+	background-color: #fdfdfd;
+}

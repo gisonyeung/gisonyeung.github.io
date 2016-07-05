@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>博文发布</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1" />
+	<link rel="shortcut icon" href="../images/blog.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-ie7.min.css">	
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="../css/font-awesome-ie7.min.css">
+	<![endif]-->
+	<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/postArticle.css"/>
+	<link rel="stylesheet" type="text/css" href="../css/Editor.css">
+    <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+	<script charset="utf-8" src="../editor/kindeditor.js"></script>
+	<script charset="utf-8" src="../editor/lang/zh_CN.js"></script>
+	<script charset="utf-8" src="../editor/plugins/image/image.js"></script>
+	<script>
+		var editor;
+	   $(function() {
+	       	var options = {
+		        cssPath : '../css/Editor.css',
+		        filterMode : true,
+		        resizeType: 1,
+		         items: [
+					        'source', 'undo', 'redo', 'code',
+					        'plainpaste', 'wordpaste', 'justifyleft', 'justifycenter', 'justifyright',
+					        'justifyfull', 'insertorderedlist', 'insertunorderedlist', 'indent', 'outdent', 'subscript',
+					        'superscript', 'clearhtml', 'quickformat',  
+					        'formatblock', 'fontname', 'fontsize', 'forecolor', 'hilitecolor', 'bold',
+					        'italic', 'underline', 'strikethrough', 'lineheight', 'removeformat',  'image',
+					        'flash', 'insertfile', 'table', 'hr', 'emoticons',
+					        'link', 'unlink'
+						],
+		        themeType: "simple",
+		        colorTable: [
+						        ['#36B6A1', '#778899', '#FF8282', '#F79B6D', '#B289CC', '#4898EB'],
+						        ['#7948DB', '#006600', '#99BB00', '#B8D100', '#60D978', '#00D5FF'],
+						        ['#337FE5', '#003399', '#4C33E5', '#9933E5', '#CC33E5', '#EE33EE'],
+						        ['#FFFFFF', '#CCCCCC', '#999999', '#666666', '#444444', '#000000']
+							],
+				// 指定上传文件的服务器端程序
+				uploadJson: "/RdcBlog/pupload.do",
+				// urlType:'domain',
+				// 指定浏览远程图片的服务器端程序
+				fileManagerJson: "xxx",
+				minHeight: "600px",
+				// afterUpload : function(url) {
+    //                     alert(url),
+				// 失去焦点时同步数据到textarea
+				afterBlur: function (){
+						   		this.sync();
+						   }
+				// autoHeightMode: trued
+			}
+			 editor = KindEditor.create('textarea[name="content"]',options);
+
+		});
+	</script>
+</head>
+<body>
+	<!-- 小屏 -->
+	<div class="menu">
+		<a class="menuSwitch icon-reorder"></a>
+	</div>
+	<!-- 通用侧边栏 -->
+	<div class="sideBar">
+		<a class="firstFloor"><span class="icon-home"> </span>主页</a>
+		<a class="firstFloor"><span class="icon-book"> </span>博客</a>
+			<a class="secondFloor">web前端</a>
+			<a class="secondFloor">后台开发</a>
+			<a class="secondFloor">安卓</a>
+			<a class="secondFloor">C++</a>
+			<a class="secondFloor">其他</a>
+		<a class="firstFloor"><span class="icon-camera-retro"> </span>照片墙</a>
+		<a class="firstFloor"><span class="icon-github"> </span>代码分享</a>
+		<a class="firstFloor"><span class="icon-flag"> </span>关于研发</a>
+			<a class="secondFloor">研发成员</a>
+			<a class="secondFloor">成就</a>
+			<a class="secondFloor">关于研发</a>
+	</div>
+	<!-- 登陆弹框 -->
+	<div id="miniLogin">
+			 <p class="loginTitle">登陆</p>
+			 <div class="loginInfo">
+				<span class="icon-user miniPst"></span>
+			 	<input id="miniUsername"  type="text" placeholder="用户名">
+			 </div>
+			 <div class="loginInfo">
+				<span class="icon-lock miniPst"></span>
+			 	<input id="miniPwd" type="password" placeholder="密码" maxlength="25">
+			 </div>
+			 <input class="miniSubmit" type="button" value="登陆">
+			 <a class="miniRegister" href="javascript:;">注册</a>
+	</div>
+	<div class="header">
+		<p class="teamName">RDC</p>
+		<!-- 大屏 -->
+		<ul class="nav">
+			<li><a><span class="lineae"></span>首页</a></li>
+			<li class="navActive"><a><span class="lineae"></span>博客</a>
+				<div class="subnav">
+					<ul>
+						<li><a><span class="lineae1"></span>全部文章</a></li>
+						<li><a><span class="lineae1"></span>web前端</a></li>
+						<li><a><span class="lineae1"></span>后台开发</a></li>
+						<li><a><span class="lineae1"></span>安卓</a></li>
+						<li><a><span class="lineae1"></span>C++</a></li>
+						<li><a><span class="lineae1"></span>其他</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a><span class="lineae"></span>照片墙</a></li>
+			<li><a><span class="lineae"></span>代码分享</a></li>
+			<li><a><span class="lineae"></span>关于研发</a>
+				<div class="subnav1">
+					<ul>
+						<li><a><span class="lineae1"></span>小组方向</a></li>
+						<li><a><span class="lineae1"></span>研发成员</a></li>
+						<li><a><span class="lineae1"></span>成就</a></li>
+						<li><a><span class="lineae1"></span>关于研发</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="user">
+			<a class="loginButton" href="javascript:;">登陆</a>
+			<div class="userHead">
+				<img src="../images/headm.jpg" class="userHeadImg">
+				<div class="selfinfo">
+					<ul>
+						<li id="nickSwitch"><a><span id="nickname">牛一敏</span><span id="selfData">个人资料</span></a></li>
+						<li>博客管理</li>
+						<li>上传照片</li>
+						<li>分享代码</li>
+						<li id="logout">注销</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainPage">
+		<div class="head">
+			<h1><span>RDC </span>博文发布</h1>
+			<p>温馨提示：点击发布前务必做好备份哦~</p>
+		</div>
+		<div id="container">
+			<div id="top">
+				<div class="author">
+					<img class="user_img" src="../images/demohead.jpg" draggable="false">
+					<p class="user_name">name</p>
+				</div>
+				<div class ="title">
+					<input type="text" class="title_txt" placeholder="输入标题" />
+				</div>
+				<div class="widget">
+					<div class="tags">
+						<p class="tagTitle">Tags：</p>
+						<div class="tagPack">
+							<div class="tagDiv">
+								<p class="tagContainer">
+									<span class="icon-circle"></span>
+									<span class="tag"></span>
+								</p>
+								<input type="text" class="tagInput" />
+							</div>
+							<div class="tagDiv">
+								<p class="tagContainer">
+									<span class="icon-circle"></span>
+									<span class="tag"></span>
+								</p>
+								<input type="text" class="tagInput" />
+							</div>
+							<div class="tagDiv">
+							<p class="tagContainer">
+								<span class="icon-circle"></span>
+								<span class="tag"></span>
+							</p>
+							<input type="text" class="tagInput" />
+							</div>
+							<div class="clr"></div>
+						</div>	
+					</div>
+					<div class="category">
+						<p>Category：</p>
+						<select id="categoryName">
+								<option>web前端</option>
+						</select>
+						<select id="attachedName">
+								<option></option>
+						</select>
+					</div>
+					<div class="clr"></div>
+				</div>	
+				<div class="clr"></div>
+			</div>
+			<div id="txt_editor">
+				<form>
+					<textarea name="content" style="width:1010px;overflow:auto;resize:none;" id="articleContent"></textarea>
+				</form>
+				<input type="button" class="btn" value="发布" />
+			</div>
+		</div>
+	</div>
+	<p class="copyrightSingle">Copyright 2015 RDC All Rights Reserved.</p>		
+	<div id="tipBox">
+    	<div class="tipHead">
+    		<p>Tip from RDC Blog</p><span class="icon-remove icon-large tip_color"></span>
+    		<div class="clr"></div>
+    	</div>
+    	<div class="tipContent">
+    		<p>This is the content.</p>
+    	</div>
+    	<div class="tipFoot">
+    		<input class="tipBtn" type="button" value="Close"/>
+    		<div class="clr"></div>
+    	</div>
+    </div>
+    <div id="mask"></div>
+    <div id="confirmBox">
+    	<div class="tipHead">
+    		<p>Warning from RDC Blog</p><span class="icon-remove icon-large confirm_color"></span>
+    		<div class="clr"></div>
+    	</div>
+    	<div class="confirmContent">
+    		<p>This is the content.</p>
+    	</div>
+    	<div class="confirmFoot">
+    		<input class="confirmBtn" id="noBtn" type="button" value="取消">
+    		<input class="confirmBtn" id="yesBtn" type="button" value="确认">
+    		<div class="clr"></div>
+    	</div>
+    </div>
+    <div id="mask2"></div>
+    <div id="barrage">
+    	<p class="mention">可输入“，”(英文逗号) 或“回车”快捷切换至下一标签。</p>
+    </div>
+	<script src="../js/postArticle.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="renderer" content="webkit">
+	<meta name="Keywords" content="仙侣,仙侣奇缘,仙侣2,仙侣奇缘2,仙侣3,仙侣奇缘3,巅峰仙侣,巅峰仙侣奇缘2,仙侣情缘">
+	<meta name="Description" content="《仙侣奇缘Ⅱ》是一款以交友为主题的大型MMORPG网络游戏。 它是以中国古代神化、仙侠、典故、历史为背景，以爱情，奇缘为主线，以网络交友为目的的一款休闲娱乐游戏。">
+	<title>《仙侣奇缘2》官方网站 - 巅峰仙侣</title>
+	<link rel="stylesheet" href="./css/common.css">
+	<link rel="stylesheet" href="./css/home.css">
+	<link href="./img/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+	<div id="nav">
+		<div class="borderNav">
+			<div class="wrapper fixed">
+				<div class="brands fixed">
+					<a href="/" class="brand">巅峰仙侣</a>
+					<a href="#" class="brand_add">4月28日 开启怀旧内测</a>
+				</div>
+				<ul class="fixed">
+					<li><a href="/">首页</a></li>
+					<li><a href="#notice">公告</a></li>
+					<li><a href="#register">注册</a></li>
+					<li><a href="#download">下载</a></li>
+					<li><a href="#footer">游戏资料</a></li>
+					<li><a href="#footer">联系客服</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="section" id="section1">
+		<div class="wrapper">
+			<div class="parts fixed">
+				<div class="part" id="notice">
+					<h2 class="title fixed">
+						<span class="icon idx1">01</span>
+						<span class="text">游戏<strong>活动</strong>公告</span>
+					</h2>
+					<ul class="noticeList">
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text">[更新] 0615更新公告</p>
+								<span class="time">06.15</span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						<li>
+							<a href="./notice/160615.html" target="_blank">
+								<p class="text"></p>
+								<span class="time"></span>
+							</a>
+						</li>
+						
+						
+
+					</ul>
+				</div>
+				<div class="part" id="register">
+					<h2 class="title fixed">
+						<span class="icon idx2">02</span>
+						<span class="text">注册游戏帐号</span>
+					</h2>
+					<div class="tab fixed">
+						<a href="javascript:;" class="user_tab active" id="user_tab1">注册</a>
+						<a href="javascript:;" class="user_tab" id="user_tab2">密码修改</a>
+						<a href="javascript:;" class="user_tab disable" id="user_tab3">密码找回</a>
+					</div>
+					<div class="content">
+						<div id="user_panel1">
+							<p class="tiptext reg_tip">6-15个字符(限英文和数字)</p>
+							<form action="http://58.221.49.71:85/save.php" method="POST" name="regForm">
+								<div class="inputPack">
+									<span class="icon icon-user"></span>
+									<input type="text" class="regBox reg" id="username" name="username" placeholder="游戏帐号" data-rel="6-15个字符(限英文和数字)">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-password"></span>
+									<input type="password" class="regBox reg" id="password" name="password" placeholder="登录密码" data-rel="4-16个字符，支持字母数字下划线">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-password"></span>
+									<input type="password" class="regBox reg" id="repassword" name="repassword" placeholder="确认密码" data-rel="请再次输入您的密码">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-keybord"></span>
+									<input type="text" class="regBox reg" id="reg_qst" name="reg_wen1" placeholder="安全问题" data-rel="密保问题，纯数字，12字符以内">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-keybord"></span>
+									<input type="text" class="regBox reg" id="reg_pwd" name="reg_pwd1" placeholder="问题答案" data-rel="密保问题答案，纯数字，12字符以内">
+								</div>
+								<button type="submit" class="btn" id="doReg">完成注册</button>
+							</form>
+						</div>
+						<div id="user_panel2">
+							<p class="tiptext pwd_tip">6-15个字符(限英文和数字)</p>
+							<form action="http://58.221.49.71:85/password.php" method="POST" name="regForm">
+								<div class="inputPack">
+									<span class="icon icon-user"></span>
+									<input type="text" class="regBox pwd" id="t2_username" name="username" placeholder="游戏帐号" data-rel="6-15个字符(限英文和数字)">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-password"></span>
+									<input type="password" class="regBox pwd" id="t2_password" name="password" placeholder="旧密码" data-rel="输入您的旧登录密码">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-password"></span>
+									<input type="password" class="regBox pwd" id="t2_repassword" name="repassword" placeholder="新密码" data-rel="6-16个字符，支持字母数字下划线">
+								</div>
+								<div class="inputPack">
+									<span class="icon icon-password"></span>
+									<input type="password" class="regBox pwd" id="t2_repassword2" name="repassword2" placeholder="确认密码" data-rel="请再次输入密码">
+								</div>
+								<button type="submit" class="btn" id="doChangePwd">修改密码</button>
+							</form>
+						</div>
+
+					</div>
+				</div>
+				<div class="part" id="download">
+					<h2 class="title fixed">
+						<span class="icon idx3">03</span>
+						<span class="text">游戏文件下载</span>
+					</h2>
+					<div class="content">
+						<div class="download">
+							<a class="dlBtn"target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=7bdfe918d3f06594795cf5340cbc47aa9a04fabb78b823ad3a4d32e485109402">Q群文件下载</a>
+							<a class="dlBtn" href="#" target="_blank">云盘下载</a>
+						</div>
+						<h4>了解游戏</h4>
+						<div class="fixed">
+							<a class="emptyBtn" href="#section2">游戏特色</a>
+							<a class="emptyBtn no-margin" href="#footer">新手指南</a>
+						</div>
+					</div>
+					<a target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=f2c923e5eb5ca189138e976985272e00ed089e55a23fbe01fce180e2590bee1f" class="downBtn download1">微变服下载</a>
+					<a target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=7bdfe918d3f06594795cf5340cbc47aa9a04fabb78b823ad3a4d32e485109402" class="downBtn download2">仿官服下载</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!-- section1 end -->
+	<div class="section" id="section2">
+		<div class="wrapper">
+			<h1 class="secTitle ts_title">巅峰仙侣九大特色</h1>
+			<div class="menu">
+				<a class="ts_item" href="javascript:;" data-index="1">
+					<span class="sign active"></span>
+					天降宝箱送祝福
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="2">
+					<span class="sign"></span>
+					在线泡点送仙币
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="3">
+					<span class="sign"></span>
+					主线任务送神宠
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="4">
+					<span class="sign"></span>
+					新手上线大福利
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="5">
+					<span class="sign"></span>
+					超级BOSS来袭
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="6">
+					<span class="sign"></span>
+					超强充值送福利
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="7">
+					<span class="sign"></span>
+					变身派对齐欢乐
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="8">
+					<span class="sign"></span>
+					暂未开放
+				</a>
+				<a class="ts_item" href="javascript:;" data-index="9">
+					<span class="sign"></span>
+					暂未开放
+				</a>
+
+			</div>
+			<div class="panels">
+				<div class="panel ts_panel" id="ts_panel1">
+					<div class="content">
+						<h2 class="title">天降<span class="text-brown">宝箱</span></h2>
+<pre>每半小时都会有<span class="text-brown">财神宝箱</span>随机降临
+在杭州城、仙霞岭、天台山、天目山等地图
+打开<span class="text-brown">财神宝箱</span>可以获得丰厚奖励，更有<span class="text-brown">神器碎片</span>、<span class="text-brown">70级神器碎片</span>等。</pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel2">
+					<div class="content">
+						<h2 class="title">在线<span class="text-brown">泡点</span></h2>
+<pre>玩家每在线1分钟系统将自动送出<span class="text-brown">5000经验、500仙币、500元神</span>
+这对各位新手玩家来说可是一个不少的数目了呢
+天天在线月收入都能达到上千万仙币了。</pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel3">
+					<div class="content">
+						<h2 class="title">主线任务送<span class="text-brown">神宠</span></h2>
+<pre>为了给新手玩家提供方便
+玩家每完成1环主线任务可以获得1个<span class="text-brown">神器碎片</span>的奖励
+完成到神归仙界最后一环时将可获得<span class="text-brown">神兽冥光狼</span>奖励</pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel4">
+					<div class="content">
+						<h2 class="title">新手<span class="text-brown">福利</span></h2>
+<pre>新手玩家上线即可获得一个<span class="text-brown">11星的嘉年华宠物</span>
+更有<span class="text-brown">嘉年华宠物专用符</span>赠送，对宠物使用后可以让宠物更加强</pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel5">
+					<div class="content">
+						<h2 class="title">进击的<span class="text-brown">超级BOSS</span></h2>
+<pre>每天中午12点、下午15点、17点、晚上21点
+在超级BOSS之家将会刷出各种超级BOSS
+各种材料、宝箱尽在其中</pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel6">
+					<div class="content">
+						<h2 class="title">充值<span class="text-brown">福利</span></h2>
+<pre>超强充值福利
+<span class="text-brown">元宝比例1:1000</span>
+<span class="text-brown">单笔满100还送50个神器碎片</span>
+<span class="text-brown">额外还有10个充值礼包</span></pre>
+					</div>
+					<a href="javascript:;" class="details">查看详情>></a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel7">
+					<div class="content">
+						<h2 class="title">暂未<span class="text-brown">开放</span></h2>
+<pre></pre>
+					</div>
+					<a href="javascript:;" class="details no-open">敬请期待</a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel8">
+					<div class="content">
+						<h2 class="title">暂未<span class="text-brown">开放</span></h2>
+<pre></pre>
+					</div>
+					<a href="javascript:;" class="details no-open">敬请期待</a>
+				</div>
+				<div class="panel ts_panel" id="ts_panel9">
+					<div class="content">
+						<h2 class="title">暂未<span class="text-brown">开放</span></h2>
+<pre></pre>
+					</div>
+					<a href="javascript:;" class="details no-open">敬请期待</a>
+				</div>
+
+
+			</div>
+		</div>	
+	</div>
+	<div class="section job3" id="section3">
+		<div class="tab_media">
+            <object type="application/x-shockwave-flash" name="item1" data="./img/role_job3.swf" width="1920" height="865" id="item1">
+	            <param name="allowfullscreen" value="true">
+	            <param name="wmode" value="transparent">
+	            <param name="allowscriptaccess" value="always">
+	            <param name="flashvars" value="__objectID=item1&amp;__url=http://58.221.49.71:85/">
+	        </object>
+        </div>
+		<div class="wrapper">
+			<h1 class="secTitle ts_title">职业介绍</h1>
+			<div class="panels">
+				<div class="panel" id="job_panel1">
+					<h2 class="title">释家</h2>
+					<div class="job_info1">
+						<p>武&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;器：刀</p>
+						<p>职业定位：高攻速/战士/近战</p>
+					</div>
+					<div class="job_info2">
+						<p>自古，习武者主要目的在于强健体魄，强心明智，延续自己的肉体生命。而往往武功修炼到一定阶段却再无法突破。</p>
+ 						<p>直到有人悄悟禅宗佛理：“欲学技击必须勘破生死关头，证悟本来心地，兹禅宗无上法门，佛门弟子毕生修持之所期，必须于此道有所得，方可臻于技击之绝顶。”习武者才一改以往的修炼方式，走向了禅武同修的道路。</p>
+						<p>此后，凡习武者在修炼身心时同悟禅理，使得武功修为有了质的飞跃，也使禅武之人突破了新的境界……</p>
+					</div>
+				</div>
+				<div class="panel" id="job_panel2">
+					<h2 class="title">儒家</h2>
+					<div class="job_info1">
+						<p>武&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;器：杖</p>
+						<p>职业定位：远程/群攻/法师</p>
+					</div>
+					<div class="job_info2">
+						<p>人儒家以孔圣之言，教化万方。</p>
+ 						<p>正心、诚意、修身、齐家、治国、平天下！又强调“人心惟危，道心惟危；惟精惟一，允执厥中”。</p>
+						<p>先儒主以修心为主，但在后期发现了修身的重要性，儒家功夫即使再强，没有生命本源的支持根本无法使修炼继续下去。</p>
+						<p>因此后期的儒家特别强调养气，正所谓“吾善养我浩然正气”。</p>
+					</div>
+				</div>
+				<div class="panel" id="job_panel3">
+					<h2 class="title">道家</h2>
+					<div class="job_info1">
+						<p>武&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;器：剑</p>
+						<p>职业定位：远程/群攻/医疗</p>
+					</div>
+					<div class="job_info2">
+						<p>人法地，地法天，天法道，道法自然。</p>
+ 						<p>道家强调“虚无生自然，自然生一气，一气分阴阳，阴阳为天地，天地生万物”。</p>
+						<p>在道家发展过程中，道教各派层出不穷，但基本信仰都是老子的"道"，目标终是长生成仙。</p>
+					</div>
+				</div>
+			</div>
+			<ul class="tabs">
+				<li class="tab_job job1" data-index="1" data-swf="./img/role_job1.swf">释家</li>
+				<li class="tab_job job2" data-index="2" data-swf="./img/role_job2.swf">儒家</li>
+				<li class="tab_job job3 active" data-index="3" data-swf="./img/role_job3.swf">道家</li>
+			</ul>
+		</div>
+	</div>
+	<div id="footer">
+		<div class="wrapper fixed">
+			<div class="part part1">
+				<h3 class="title title1">游戏资料</h3>
+				<div class="details">
+					<p>
+						<a href="http://xlqy2.17173.com/beijing/yinyan.shtml" target="_blank">故事背景</a>
+						<a href="http://xlqy2.17173.com/tese/tese.shtml" target="_blank">游戏特色</a>
+						<a href="http://xlqy2.17173.com/newbie/newbie.shtml" target="_blank">新手指南</a>
+						<a href="http://xlqy2.17173.com/jineng/jineng.shtml" target="_blank">职业技能</a>
+						<a href="http://xlqy2.17173.com/shenghuo/shenghuo.shtml" target="_blank">生活技能</a>
+					</p>
+					<p>
+						<a href="http://xlqy2.17173.com/hudong/hudong.shtml" target="_blank">交互相关</a>
+						<a href="http://xlqy2.17173.com/xitong/xitong.shtml" target="_blank">游戏系统</a>
+						<a href="http://xlqy2.17173.com/guaiwu/changzhou.shtml" target="_blank">怪物分布</a>
+						<a href="http://xlqy2.17173.com/map/map.shtml" target="_blank">世界地图</a>
+						<a href="http://xlqy2.17173.com/npc/hangzhou1.shtml" target="_blank">NPC介绍</a>
+					</p>
+					<p>
+						<a href="http://xlqy2.17173.com/renwu/renwu.shtml" target="_blank">任务大全</a>
+						<a href="http://xlqy2.17173.com/daoju/daoju.shtml" target="_blank">道具装备</a>
+						<a href="javascript:;" target="_blank">强化系统</a>
+						<a href="javascript:;" target="_blank">仇杀系统</a>
+						<a href="javascript:;" target="_blank">飞升系统</a>
+					</p>
+				</div>
+			</div>
+			<div class="part part2">
+				<h3 class="title title2">下载游戏</h3>
+				<div class="details">
+					<p>
+						<a target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=7bdfe918d3f06594795cf5340cbc47aa9a04fabb78b823ad3a4d32e485109402">Q群文件下载</a>
+					</p>
+					<p>
+						<a href="javascript:;" target="_blank">云盘下载</a>
+					</p>
+				</div>
+				
+			</div>
+			<div class="part part3">
+				<h3 class="title title3">客服信息</h3>
+				<div class="details">
+					<p>客服QQ：122282586</p>
+					<p>仿官服Q群：<a target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=7bdfe918d3f06594795cf5340cbc47aa9a04fabb78b823ad3a4d32e485109402">310242912</a></p>
+					<p>微变服Q群：<a target="_blank" title="加入Q群" href="http://shang.qq.com/wpa/qunwpa?idkey=f2c923e5eb5ca189138e976985272e00ed089e55a23fbe01fce180e2590bee1f">288511359</a></p>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="./css/IE7.css">
+	<div id="ms_mask"></div>
+	<div id="ms_popping">
+		<div class="ms_head">
+			<img src="./img/warn.png" class="ms_warn">
+			<h4>我们检测到您正在使用过时版本的IE浏览器，此版本的IE浏览器不被我们支持。</h4>
+			<div class="clr"></div>
+		</div>
+		<div class="ms_body">
+			<p>为了更好的浏览体验，我们推荐您使用以下新版本的现代浏览器：</p>
+			<div class="ms_introduce">
+				<a href="http://rj.baidu.com/soft/detail/14744.html?ald">
+					<div class="ms_intr">
+						<img src="./img/chromelogo.jpg"/>
+						<h4>Chrome 谷歌浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<a href="http://rj.baidu.com/soft/detail/11843.html?ald">
+					<div class="ms_intr">
+						<img src="./img/fflogo.jpg"/>
+						<h4>Firefox 火狐浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<div class="clr"></div>
+			</div>	
+		</div>
+	</div>
+	<![endif]-->
+	<script src="./js/zepto.min.js"></script>
+	<script src="./js/home.js"></script>
+</body>
+</html>

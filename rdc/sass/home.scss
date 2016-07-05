@@ -1,0 +1,553 @@
+@charset "utf-8";
+
+$yellow: #ffdf5e;
+
+@mixin bn-block {
+	position: absolute;
+	top: 50%;
+	width: 473px;
+    height: 390px;
+    margin-top: -150px;
+    z-index: 10;
+}
+
+@mixin max-screen($res) {
+  @media screen and ( max-width: $res )
+  {
+    @content;
+  }
+}
+
+@mixin min-screen($res) {
+  @media screen and ( min-width: $res )
+  {
+    @content;
+  }
+}
+
+@mixin sprite($num, $x, $y, $xDir: center, $yDir: top) {
+	background: transparent url(../images/sprite/sprite-#{$num}.png) no-repeat $xDir $yDir;
+	background-position: $x $y;
+}
+
+@mixin transition($obj: all, $time: 0.2s, $type: ease-out) {
+	transition: $obj $time $type;
+	-moz-transition: $obj $time $type;	/* Firefox 4 */
+	-webkit-transition: $obj $time $type;	/* Safari 和 Chrome */
+	-o-transition: $obj $time $type;
+}
+
+@mixin bgimg($url) {
+	background: transparent url($url) no-repeat center top;
+}
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif;
+    font-size: 100%;
+}
+html, body {
+	color: #333;
+}
+body {
+	// min-height: 2000px;
+	background-color: #0F4457;
+}
+#bg {
+	position: fixed;
+	background: transparent url(../images/background.png) repeat center top;
+	background-color: #0F4457;
+	background-size: cover;
+	z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+a:link, a:visited {
+    color: #333;
+    text-decoration: none;
+}
+ul, ol, li {
+    list-style: none;
+}
+
+.topbar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 75px;
+	// background: transparent url(../images/lineartop.png) repeat-x center top;
+	z-index: 900;
+	@include transition();
+}
+.topbar.alt {
+	height: 75px;
+	background-color: rgba(206, 206, 206, 0.34);
+}
+.toppic {
+	max-width: 1170px;
+	min-width: 980px;
+	width: 80%;
+	height: 75px;
+	margin: 0 auto;
+	a {
+		&:link, &:visited {
+			color: #fff;
+		}
+	}
+}
+ .topside {
+	float: left;
+	width: 100%;
+}
+.topNav {
+    float: left;
+    padding-left: 18px;
+
+    li {
+    	float: left;
+   		margin-left: 20px;
+		a {
+			float: left;
+		    padding: 0 20px;
+		    line-height: 75px;
+		    font-size: 1.125em;
+		    &:hover {
+		    	background: $yellow;
+		    }
+		}
+   		&.current a {
+   			background: $yellow;
+   		}
+    }
+}
+.logoLink {
+	float: left;
+	display: block;
+	width: 210px;
+	height: 0px;
+	overflow: hidden;
+	padding-top: 76px;
+	font-size: 0;
+	background: transparent url(../images/logo.png) no-repeat left 15px;
+}
+
+.rdcbg {
+	@include transition;
+}
+
+.banner {
+    width: 100%;
+
+    .rdcbg {
+	    position: relative;
+	    width: 100%;
+	    height: 585px;
+	    overflow: hidden;
+	    /* max-width: 1920px; */
+	    min-width: 1007px;
+	    margin: 0 auto;
+	    @include bgimg("../images/banner.png");
+	    background-size: cover;
+	}
+}
+
+.banner, .rdcbg, .content {
+	z-index: 100;
+}
+
+.bncont {
+    position: relative;
+    width: 948px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.bntxt {
+    left: -100px;
+    @include bn-block;
+
+    .restday {
+		.rttxt {
+			position: absolute;
+			right: 0;
+			padding-top: 20px;
+			width: 187px;
+		    height: 0;
+		    overflow: hidden;
+		    text-indent: -9999px;
+		    @include sprite(1, 0, -61px);
+			// @include bgimg("../images/rest-md.png");
+			
+		}
+		.unit {
+			position: absolute;
+			right: 0;
+			top: 158px;
+			width: 22px;
+			height: 0;
+			padding-top: 22px;
+			overflow: hidden;
+			text-indent: -9999px;
+			@include sprite(1, 0, 0);
+			// @include bgimg("../images/day-md.png");
+		}
+		.rtday {
+			position: absolute;
+			right: 40px;
+			top: 33px;
+			font-family: Microsoft YaHei;
+			font-size: 136px;
+			color: #fff;
+		}
+    }
+	.joinus {
+		position: absolute;
+		top: 268px;
+		right: 0;
+		width: 275px;
+		height: 0;
+		padding-top: 53px;
+		overflow: hidden;
+		text-indent: -9999px;
+		@include sprite(1, 0, -249px);
+		// @include bgimg("../images/joinus-md.png");
+		&:hover {
+			@include sprite(1, 0, -186px);
+			// background: url(../images/joinus-active-md.png);
+		}
+	}
+}
+.bnmsg {
+    @include bn-block;
+    right: -53px;
+	.bntitle {
+		position: absolute;
+		top: 0;
+		left: -11px;
+		width: 472px;
+		height: 0;
+		padding-top: 100px;
+		overflow: hidden;
+		text-indent: -9999px;
+		@include sprite(1, 0, -761px);
+		// @include bgimg("../images/header1-md.png");
+	}
+	.bndetails {
+		position: absolute;
+		top: 142px;
+		left: -35px;
+		width: 388px;
+		height: 0;
+		padding-top: 257px;
+		overflow: hidden;
+		text-indent: -9999px;
+		@include sprite(1, 0, -491px);
+		// @include bgimg("../images/message-md.png");
+	}
+}
+
+.circle {
+    position: relative;
+    width: 100%;
+    height: 52px;
+    margin-top: -52px;
+    background: transparent url(../images/linearbot.png) repeat-x left top;
+    text-align: center;
+    z-index: 5;
+}
+
+.content {
+	.section {
+		.title {
+			height:169px;
+			padding-top: 111px;
+			background-color: #fff;
+			z-index: 100;
+			h2 {
+				z-index: 100;
+			}
+			.groupIntro {
+				margin: 0 auto;
+				width: 241px;
+				height: 0;
+				padding-top: 58px;
+				overflow: hidden;
+				text-indent: -9999px;
+				@include sprite(2, 0, 0);
+				// @include bgimg("../images/grouptitle.png");
+			}
+			.about {
+				margin: 0 auto;
+				width: 664px;
+				height: 0;
+				padding-top: 119px;
+				overflow: hidden;
+				text-indent: -9999px;
+				@include sprite(2, 0, -2934px);
+				// @include bgimg("../images/abouttitle.png");
+			}
+		}
+		.group {
+			padding: 100px 0;
+			.dir {
+				z-index: 50;
+			    width: 100%;
+			    height: 100%;
+			    text-align: center;
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+			    box-sizing: border-box;
+			}
+			p {
+				z-index: 50;
+				margin: 0 auto;
+				width: 658px;
+				height: 0;
+				overflow: hidden;
+				text-indent: -9999px;
+			}
+		}
+	}
+}
+#frontend {
+	padding-top: 755px;
+	@include sprite(2, 0, -1039px);
+	// @include bgimg("../images/group1-md.png");
+}
+#backstage {
+	padding-top: 597px;
+	@include sprite(2, 0, -1807px);
+	// @include bgimg("../images/group2-md.png");
+}
+#android {
+	padding-top: 504px;
+	@include sprite(2, 0, -2416px);
+	// @include bgimg("../images/group3-md.png");
+}
+#cplus {
+	padding-top: 417px;
+	@include sprite(2, 0, -602px);
+	// @include bgimg("../images/group4-md.png");
+}
+$padding: 16px;
+#about {
+	width: 100%;
+	padding-bottom: 200px;
+	background-color: #fff;
+	text-align: center;
+	.title {
+		height: 251px;
+		padding-top: 132px;
+	}
+	h4 {
+		margin: 0 auto;
+		height: 0;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	.text{
+		margin: 50px auto;
+		p {
+			color: #444;
+			font-size: 20px;@include sprite(2, 0, -251px);
+			line-height: 40px;
+		}
+	}
+	.rdclogo {
+		margin: 30px auto;
+		width: 446px;
+		padding-top: 332px;
+		@include sprite(2, 0, -251px);
+		// @include bgimg("../images/rdc.png");
+	}
+	.family {
+		margin: 120px auto;
+		width: 636px;
+		padding: $padding;
+		padding-top: 401 + $padding;
+		border-radius: 6px;
+		box-shadow: 0 0 14px lighten(#000, 90%);
+		background: #fff url(../images/family.png) no-repeat center $padding;
+	}
+	.joinus1 {
+		display: block;
+		margin: 100px auto;
+		width: 386px;
+		height: 0;
+		padding-top: 76px;
+		overflow: hidden;
+		text-indent: -9999px;
+		@include sprite(2, 0, -71px);
+		// @include bgimg("../images/joinus1.png");
+		&:hover {
+			@include sprite(2, 0, -160px);
+			// @include bgimg("../images/joinus1-active.png");
+		}
+	}
+}
+#totop {
+	display: block;
+	position: fixed;
+	right: 150px;
+	bottom: 50px;
+	padding: 22px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 200;
+	background-color: rgba(#ccc, 0.4);
+	@include transition();
+	&:hover {
+		background-color: $yellow;
+	}
+	&.hide {
+		z-index: -100;
+		opacity: 0;
+		filter: alpha(opacity=0);
+	}
+	span {
+		display: block;
+		width: 22px;
+		height: 0;
+		padding-top: 12px;
+		overflow: hidden;
+		text-indent: -9999;
+		// @include sprite(3, 0, 0);
+		@include bgimg("../images/totop.png")
+	}
+}
+
+.menu {
+	position: fixed;
+	right: 0;
+	top: 48%;
+	z-index: 1500;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+	@include transition();
+	&:hover {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+	ul {
+		li {
+			a {
+				position: absolute;
+				right: 0;
+				display: block;
+				height: 0;
+				padding-top: 54px;
+				overflow: hidden;
+				text-indent: -9999;
+				@include transition(opacity);
+				@include transition(right);
+			}
+			#toWeb {
+				margin-top: -110px;
+				width: 207px;
+				right: -150px;
+				@include sprite(3, 0, 0px);
+				// @include bgimg("../images/g1intro.png");
+				&:hover {
+					right: 0;
+					@include sprite(3, 0, -61px);
+					// @include bgimg("../images/g1intro-active2.png");
+				}
+			}
+			#toBackstage {
+				margin-top: -55px;
+				width: 252px;
+				right: -195px;
+				@include sprite(3, 0, -251px);
+				// @include bgimg("../images/g2intro.png");
+				&:hover {
+					right: 0;
+					@include sprite(3, 0, -314px);
+					// @include bgimg("../images/g2intro-active2.png");
+				}
+			}
+			#toAndroid {
+				width: 274px;
+				right: -217px;
+				@include sprite(3, 0, -378px);
+				// @include bgimg("../images/g3intro.png");
+				&:hover {
+					right: 0;
+					@include sprite(3, 0, -441px);
+					// @include bgimg("../images/g3intro-active2.png");
+				}
+			}
+			#toCplus {
+				margin-top: 55px;
+				width: 238px;
+				right: -181px;
+				@include sprite(3, 0, -125px);
+				// @include bgimg("../images/g4intro.png");
+				&:hover {
+					right: 0;
+					@include sprite(3, 0, -187px);
+					// @include bgimg("../images/g4intro-active2.png");
+				}
+			}
+
+		}
+	}
+}
+
+
+
+@include min-screen(1367px) {
+	.bntxt, .bnmsg{
+		margin-top: -224px;
+	}
+	.bnmsg {
+		.bntitle {
+			width: 664px;
+			padding-top: 140px;
+			@include sprite(1, 0, -1249px);
+			// background: url(../images/header1.png);
+		}
+		.bndetails {
+			top: 192px;
+			width: 546px;
+			padding-top: 361px;
+			@include sprite(1, 0, -873px);
+			// background: url(../images/message.png);
+		}
+	}
+	.bntxt {
+		.restday {
+			.rtday {
+				top: 16px;
+				font-size: 206px;
+			}
+			.rttxt {
+				width: 263px;
+				padding-top: 28px;
+				@include sprite(1, 0, -146px);
+				// background: url(../images/rest.png);
+			}
+			.unit {
+				top: 210px;
+				width: 31px;
+				padding-top: 28px;
+				@include sprite(1, 0, -27px);
+				// background: url(../images/day.png);
+			}
+		}
+		.joinus {
+			top: 360px;
+			width: 386px;
+			padding-top: 75px;
+			@include sprite(1, 0, -401px);
+			// background: url(../images/joinus.png);
+			&:hover {
+				@include sprite(1, 0, -314px);
+				// background: url(../images/joinus-active.png);
+			}
+		}
+	}
+}

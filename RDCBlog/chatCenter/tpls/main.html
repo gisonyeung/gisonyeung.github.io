@@ -1,0 +1,47 @@
+ <div class="main" ng-controller="mainController">
+    <div class="main_inner">
+        <div class="panel">
+            <div class="header" ng-controller="selfController">
+                <div class="avatar">
+                    <img class="img" src="../images/myhead.jpg">
+                </div>
+                <div class="info">
+                    <h3 class="nickname">
+                        <span class="display_name">{{nickname}}</span>
+                        <a class="opt" href="javascript:;" ng-click="toggleSystemMenu($event)"><i class="web_wechat_add"></i></a>
+                    </h3>
+                </div>
+            </div>
+            <div class="search_bar" id="search_bar">
+                <i class="web_wechat_search"></i>
+                <input class="frm_search" type="text" ng-model="keyword"placeholder="搜索">
+                <iframe id="tmp_downloadhelper_iframe" style="display: none;"></iframe>
+            </div>
+            <div class="tab" ng-class="{no_reader: !isShowReader}">
+                <div class="tab_item">
+                    <a class="chat" ui-sref=".chat" title="聊天" href="#" toggle-panel ng-click="toggle()"><i class="web_wechat_tab_chat" ng-class="{web_wechat_tab_chat_hl: current.name=='chat'}"></i></a>
+                </div>
+                <div class="tab_item no_extra">
+                    <a class="chat" ui-sref=".contact" title="通讯录" href="#" toggle-panel ng-click="toggle()"><i class="web_wechat_tab_friends" ng-class="{web_wechat_tab_friends_hl: current.name=='contact'}"></i></a>
+                </div>
+            </div>
+
+            <div nav-chat-directive class="nav_view" ng-style="{display:current.name ==='chat'?'block':'none',width:current.name==='chat'?'auto':'0'}"></div>
+            <div nav-contact-directive class="nav_view" ng-style="{display:current.name ==='contact'?'block':'none',width:current.name==='contact'?'auto':'0'}"></div>
+            <div id="mmpop_system_menu" class="mmpop system_menu" style="top: 60px; left: 85px;" menu-directive><ul class="dropdown_menu" ng-show="isMenuShow">
+                <li>
+                    <a ng-click="lookdata($event)" href="javascript:;" title="个人资料">
+                        <i class="menuicon_feedback"></i>个人资料        </a>
+                </li>
+                <li class="last_child">
+                    <a ng-click="lookdata($event)" title="退出">
+                        <i class="menuicon_quit"></i>退出        </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <div ui-view style="height: 100%;">
+        </div>
+    </div>    
+
+</div>

@@ -1,0 +1,87 @@
+同时获取最近联系人、联系人对应的未读消息、最新一条消息
+url:
+/message/contacts
+
+
+返回
+{
+    "contactUserList": [
+        {
+            "email": "",
+            "id": 2,
+            "messagesUnread": 0,
+            "password": "123456",
+            "role": 0,
+            "userInfo": {
+                "address": "",
+                "birthday": null,
+                "blogNum": 0,
+                "browseNum": 0,
+                "grade": "",
+                "icon": "",
+                "id": 0,
+                "introduction": "",
+                "major": "",
+                "nickName": "",
+                "praiseNum": 0,
+                "realName": "",
+                "sex": 0,
+                "teleNumber": ""
+            },
+            "userName": "congC"
+        },
+        {
+            "email": "",
+            "id": 3,
+            "messagesUnread": 0,
+            "password": "",
+            "role": 0,
+            "userInfo": null,
+            "userName": ""
+        }
+    ],
+    "latestMessageList": {
+        "2": {
+            "author": "congA",
+            "category": 1,
+            "content": "sent content.",
+            "id": 0,
+            "receiver": "congB",
+            "sendTime": {
+                "date": 16,
+                "day": 5,
+                "hours": 19,
+                "minutes": 22,
+                "month": 9,
+                "seconds": 13,
+                "time": 1444994533090,
+                "timezoneOffset": -480,
+                "year": 115
+            },
+            "status": 1
+        },
+        "3": {
+            "author": "congC",
+            "category": 1,
+            "content": "received content.",
+            "id": 0,
+            "receiver": "congA",
+            "sendTime": {
+                "date": 16,
+                "day": 5,
+                "hours": 19,
+                "minutes": 22,
+                "month": 9,
+                "seconds": 13,
+                "time": 1444994533090,
+                "timezoneOffset": -480,
+                "year": 115
+            },
+            "status": 1
+        }
+    },
+    "unreadMessageNumberList": {
+        "2": 34,
+        "3": 27
+    }
+}

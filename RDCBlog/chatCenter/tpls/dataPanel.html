@@ -1,0 +1,34 @@
+<div class="tip_overlay" ng-click="closeData()"></div>
+<div class="data_content" infobox-heightresize ng-style="{ marginTop: panelHeight }">
+    <div class="tip_hd">
+        <h3 class="title">个人资料</h3>
+    </div>
+    <div class="data_bd">
+        <p class="data_sex" ng-class="{active:userData.sex!='女'}" ng-click="changeSex()">男</p>
+        <p class="data_sex" ng-class="{active:userData.sex=='女'}" ng-click="changeSex()">女</p>
+        <img src="../images/myhead.jpg" class="data_head">
+        <div class="data_pack" item-directive>
+            <p class="data_nickName" ng-hide="isShow" ng-click="getShow($event)">{{userData.nickName || '无'}}</p>
+            <input type="text" class="data_nickName_input" ng-show="isShow" ng-click="input($event)" ng-model="userData.nickName" ng-blur="cutLength(20)" cut-directive>
+        </div>
+        <div class="data_pack" style="margin-bottom: 30px" item-directive>
+            <pre class="data_introduction" ng-hide="isShow" ng-click="getShow($event)">{{userData.introduction || "暂无个人签名"}}</pre>
+            <textarea class="data_introduction_input" ng-show="isShow" ng-model="userData.introduction" ng-click="input($event)" ng-blur="cutLength(400)" cut-directive></textarea>
+        </div>
+        <div class="data_infomation_pack" item-directive>
+            <label class="data_keyName">邮箱: </label>
+            <span class="data_infomation" ng-hide="isShow" ng-click="getShow2($event)">{{userData.email || "无"}}</span>
+            <input type="email" class="data_infomation_input" ng-show="isShow" ng-model="userData.email" ng-click="input($event)" ng-blur="checkEmail()" email-directive ng-keyup="emailFilter()">
+        </div>
+        <div class="data_infomation_pack" item-directive>
+            <label class="data_keyName">年龄: </label>
+            <span class="data_infomation" ng-hide="isShow" ng-click="getShow2($event)">{{userData.age || "0"}}</span>
+            <input type="number" class="data_infomation_input" ng-show="isShow" ng-model="userData.age" ng-click="input($event)">
+        </div>
+    </div>
+    <div class="tip_ft">
+        <a href="javascript:" class="tip_button" ng-click="resetData()">重置</a>
+        <a href="javascript:" class="tip_button" ng-click="saveData()">保存</a>
+    </div>
+    <div class="tip_close ng_close" ng-click="resetData(1)"></div>
+</div>

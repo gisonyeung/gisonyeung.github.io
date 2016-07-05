@@ -1,0 +1,413 @@
+﻿@charset "utf-8";
+
+
+html,
+body {
+	display: block;
+	height: 100%;
+}
+
+div#container {
+	width: 100%;
+	height: 100%;
+	display: block;
+	-webkit-box-shadow: 0 0 10px #999;
+	-moz-box-shadow: 0 0 10px #999;
+	box-shadow: 0 0 10px #999;
+	background: #D1EAFF;
+}
+
+#topHeader {
+	position: fixed;
+	top: -185px;
+	left: 0;
+	width: 100%;
+	padding: 0 0 12px;
+	background: url(../img/common/bg_htr_01.png) 0 100% repeat-x;
+	z-index: 50000;
+}
+
+#topHeader p.skip {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+
+#topHeader .hdrWrap {
+	padding-top: 20px;
+}
+
+.hdrWrap .inWrap {
+	position: relative;
+	padding-bottom: 20px;
+}
+
+#topHdr01,
+#topHdr02,
+#topHdr03 {
+	float: left;
+	width: 302px;
+	min-height: 130px;
+	padding: 15px 10px 0 20px;
+	border-left: 1px solid #3b2f16;
+}
+
+#topHdr03 {
+	border-right: 1px solid #3b2f16;
+}
+
+div#topHeader .second {
+	margin-top: 3px;
+}
+
+div#topHeader .second li {
+	display: inline-block;
+	margin-right: 10px;
+	*zoom: 1;
+}
+
+div#topHeader .second li a {
+	padding-left:  10px;
+	background: url(../img/common/icon_arrw_02.png) 0 50% no-repeat;
+	text-decoration: none;
+	color: #dbd7cc;
+}
+
+div#topHeader .second li a:hover {
+	text-decoration: underline;
+	color: #7e6c45;
+}
+
+#menuTog {
+	position: absolute;
+	width: 93px;
+	height: 35px;
+	right: 0;
+	bottom: -35px;
+	cursor: pointer;
+}
+
+/* ----------------------------------------
+
+content
+
+---------------------------------------- */
+
+#firstNext {
+	animation:flash 1.5s infinite;
+	-webkit-animation:flash 1.5s infinite; /*Safari and Chrome*/
+}
+@keyframes flash
+{
+0% {opacity: 1;}
+50% {opacity: 0.2;}
+100% {opacity: 1;}
+}
+
+@-webkit-keyframes flash /*Safari and Chrome*/
+{
+0% {opacity: 1;}
+50% {opacity: 0.2;}
+100% {opacity: 1;}
+}
+
+div#content {
+	margin: 0 auto -12px;
+	position: relative;
+	padding-bottom: 0;
+	background-color: #0b1010;
+}
+
+#menubar {
+	position: relative;
+	width: 200px;
+	min-height: 3000px;
+	background-color: #9EC5E4;
+	display: block;
+	position: absolute;
+	left: 50%;
+	margin-left: -100px;
+	z-index: 20000;
+}
+
+#menubar .nav {
+	width: 140px;
+}
+
+#menubar #nav01,
+#menubar #nav03,
+#menubar #nav05 {
+	background: url(../img/top/bg_nab_01.jpg) no-repeat 0 0;
+}
+#menubar #nav02,
+#menubar #nav04,
+#menubar #nav06 {
+	background: url(../img/top/bg_nab_02.jpg) no-repeat 0 0;
+}
+#menubar #nav01 { padding-top: 72px; padding-bottom: 45px;}
+#menubar #nav02 { padding-top: 78px; padding-bottom: 63px;}
+#menubar #nav03 { padding-top: 55px; padding-bottom: 52px;}
+#menubar #nav04 { padding-top: 60px; padding-bottom: 33px;}
+#menubar #nav05 { padding-top: 61px; padding-bottom: 68px;}
+#menubar #nav06 { padding-top: 66px; padding-bottom: 44px;}
+
+#menubar .nav a {
+	position: relative;
+	display: block;
+	text-align: center;
+	*zoom: 1;
+}
+
+#menubar .nav span {
+	position: absolute;
+	top: 100px;
+	right: 0;
+	display: block;
+	width: 3px;
+	height: 0;
+	overflow: hidden;
+	background-color: #97753a;
+}
+
+#menubar #nav01 span {
+	top: 30px;
+}
+
+#menubar #nav02 span {
+	top: 30px;
+}
+
+#menubar #nav03 span {
+	top: 25px;
+}
+
+#menubar #nav04 span {
+	top: 32px;
+}
+
+#menubar #nav05 span {
+	top: 32px;
+}
+
+#menubar #nav06 span {
+	top: 30px;
+}
+
+.sp #pNav01,
+.sp #pNav02,
+.sp #pNav03,
+.sp #pNav04,
+.sp #pNav05,
+.sp #pNav06 {
+	display: none;
+}
+
+
+.mBlock {
+	position: relative;
+	width: 1366px;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+}
+
+.inBlock {
+	position: relative;
+	width: 1050px;
+	margin: 0 auto;
+}
+
+.bgParts {
+	position: absolute;
+	width: 1366px;
+	height: 196px;
+	left: 0;
+	background-position: 50% 0;
+	background-repeat: no-repeat;
+}
+
+#m01 {
+	background-image: url(../img/top/bg_01_01.jpg);
+	height: 1038px;
+	z-index: 1000;
+}
+#m01Btm {
+	bottom: 0;
+	background-image: url(../img/top/bg_01_02.min.png);
+}
+
+#m02 {
+	background-image: url(../img/top/bg_02_01.jpg);
+	height: 1023px;
+	z-index: 100;
+}
+#m02Btm {
+	bottom: 0;
+	height: 108px;
+	background-image: url(../img/top/bg_02_02.min.png);
+}
+
+#m03 {
+	background-image: url(../img/top/bg_03_01.jpg);
+	height: 877px;
+	z-index: 10;
+}
+#m03Btm {
+	bottom: 0;
+	height: 103px;
+	background-image: url(../img/top/bg03_02.png);
+}
+
+#m04 {
+	background-image: url(../img/top/bg04.jpg);
+	height: 918px;
+	z-index: 1;
+}
+
+.pagetop01 {
+	z-index: 2000;
+}
+
+
+.infoBlock01 .title {
+	margin-bottom: 6px;
+}
+
+.infoList {
+	height: 120px;
+	overflow: auto;
+}
+
+.infoList li {
+	padding: 3px 0;
+	/* clearfixさせること */
+}
+
+.infoList li a,
+.infoList li span {
+	display: block;
+	margin-left: 9em;
+	zoom: 1;
+}
+
+.infoList li span.date {
+	float: left;
+	width: 8em;
+	margin-left: 0;
+}
+
+#obj01,
+#info01 {
+	position: absolute;
+	top: 253px;
+	left: 42px;
+}
+
+#info01 {
+	top: 552px;
+	right: -90px;
+}
+
+#btn01,
+#products01 {
+	position: absolute;
+	z-index: 100;
+}
+
+#products01 {
+	position: relative;
+	width: 473px;
+	height: 489px;
+	padding: 38px 0 0 46px;
+	background: url(../img/top/products_01.png) 0 0 no-repeat;
+}
+
+#btn02,
+#lab01 {
+	position: absolute;
+	z-index: 99;
+}
+
+#btn03,
+#column01 {
+	position: absolute;
+	z-index: 2;
+}
+
+#column01 {
+	width: 400px;
+	height: 137px;
+	padding: 20px 25px 25px;
+	background: #e7e7e7;
+}
+
+
+#topFooter {
+	position: relative;
+	width: 100%;
+	height: 120px;
+	background-color: #FDFFD0;
+	z-index: 30000;
+}
+
+#topFooter #footer {
+	background: none;
+	padding-top: 0;
+}
+
+#topFooter #footer .ftrWrap {
+	padding: 30px 0 0;
+}
+
+#topFooter #footer .ftrWrap .inWrap {
+	width: 1050px;
+}
+
+.topPageTop {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1000px;
+	margin-left: -600px;
+	text-align: right;
+}
+.topPageTop a {
+	position: absolute;
+	top: -38px;
+}
+
+#topID {
+	margin-left: 46px;
+}
+#topID02 {
+	margin-left: 86px;
+}
+#topID03 {
+	margin-left: 85px;
+}
+#obj04 {
+	z-index: 30000;
+}
+/* ----------------------------------------
+
+clearfix (必要)
+
+---------------------------------------- */
+
+/* Modern Browsers
+------------------------------- */
+
+.infoList li:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+/* Legacy IE
+------------------------------- */
+
+.infoList li {
+	*zoom: 1;
+}

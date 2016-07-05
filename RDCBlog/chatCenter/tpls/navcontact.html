@@ -1,0 +1,19 @@
+<div class="scroll-wrapper chat_list scrollbar-dynamic">
+    <div class="scroll-wrapper J_ContactScrollBody scrollbar-dynamic contact_list scroll-content" >
+        <div ng-repeat="item in allContact">
+            <div>
+                <div contact-item-directive ng-class="{'active':current.friend.userid == item.userid}" data-userid="{{item.userid}}" ng-click="toggle($index)">
+                    <div class="contact_item">
+                        <div class="avatar">
+                            <img class="img lazy" src="../images/otherhead.jpg">
+                        </div>
+                        <div class="info">
+                            <h4 class="nickname">{{item.remark || item.nickName}}</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+</div>

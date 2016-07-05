@@ -1,0 +1,97 @@
+*{
+	padding:0px;
+	border:none;
+	margin: 0 auto;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+}
+a{
+text-decoration:none;
+cursor: pointer;
+}
+img{border:0;}
+/*-------内容---------*/
+#ms_mask{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 1002;
+	background-color: #000;
+	filter: "alpha(opacity=50)";
+	filter:alpha(opacity=50);
+}
+#ms_popping{
+	position: fixed;
+	top: 120px;
+	left: 450px;
+   	width: 600px;
+	height: 400px;
+	background-color: #fff;
+	border: 8px solid #000;
+	z-index: 2000;
+}
+.ms_head{
+	margin: 20px;
+	margin-bottom: 13px;
+	padding-bottom: 7px;
+	border-bottom: 1px solid #E6E6E6;
+}
+.ms_warn{
+	display: block;
+	width: 65px;
+	height: 65px;
+	float: left;
+}
+.ms_head h4{
+	display: block;
+	width: 450px;
+	padding: 10px;
+	line-height: 25px;
+	float: left;
+	font-size: 18px;
+}
+.clr{
+	clear: both;
+}
+.ms_body{
+	width: 500px;
+}
+.ms_body p{
+	font-size: 16px;
+	color: #6E6E6E;
+}
+.ms_introduce{
+	width: 470px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.ms_intr{
+	display: block;
+	width: 160px;
+	padding: 30px;
+	margin: 0 auto;
+	float: left;
+	border: 1px solid #fff;
+}
+.ms_intr:hover{
+border: 1px solid #ccc;
+
+}
+.ms_intr img{
+	display: block;
+	padding-bottom: 10px; 
+	width: 80px;
+	height: 80px;
+}
+.ms_intr h4{
+	text-align: center;
+	padding-bottom: 10px; 
+	font-size: 16px;
+	color: #5386fa;
+}
+.ms_intr p{
+	text-align: center;
+	font-size: 14px;
+	color: #8b8b8b;
+}

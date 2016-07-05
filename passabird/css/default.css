@@ -1,0 +1,398 @@
+@charset "utf-8";
+
+/*------------------------------------------------------------------------------
+株式会社 菱健 HISHIKEN Co. Ltd., - CSS Modules Import
+Date: 2013-6-4
+Copyright (C) 2013 株式会社 菱健 All rights reserved.
+------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------
+
+再定義
+
+---------------------------------------- */
+
+body {
+	line-height: 1.67;
+	background-color: #fff;
+	font-family: Meiryo, "メイリオ", Verdana, Arial, Helvetica, Sans-Serif;
+	color: #796c4b;
+	display: table;
+	width: 100%;
+}
+
+a:link {
+	color: #97753a;
+}
+
+a:visited {
+	color: #97753a;
+}
+
+a:hover,
+a:visited:hover {
+	text-decoration: none;
+}
+
+a:active {
+	color: #97753a;
+}
+
+
+/* 必要な箇所だけに指定する場合は削除
+------------------------------- */
+
+img {
+	vertical-align: bottom;
+}
+
+/*
+**
+IE6,7 で font-size 11px を使用する場合は日本語フォントを明示的に指定する
+使用しない場合は削除
+
+* html body,
+* html body input,
+* html body select {
+    font-family: 'ＭＳ Ｐゴシック', Verdana, Arial, Helvetica, Sans-Serif;
+}
+
+*:first-child+html body,
+*:first-child+html body input,
+*:first-child+html body select {
+    font-family: 'メイリオ','ＭＳ Ｐゴシック', Verdana, Arial, Helvetica, Sans-Serif;
+}
+**
+*/
+
+
+/* ----------------------------------------
+
+container
+
+---------------------------------------- */
+
+div#container {
+	margin: 0 auto;
+	font-size: 100%; /* fontsize 13px */
+	background: #DFE1D8 url(../../img/common/bg_01.png) no-repeat 50% 76px;
+	max-width: 1366px;
+}
+/*
+**
+子要素のフォントサイズ指定は以下を参照
+http://aloestudios.com/tools/emchart/
+例)
+基準フォントサイズが13pxで、
+特定の要素を12pxにしたい時は92.4%と指定
+**
+*/
+
+/* ----------------------------------------
+
+header
+
+---------------------------------------- */
+
+div#header {
+	background: url(../../img/common/bg_htr_01.png) repeat-x 0 100%;
+	padding-bottom: 12px;
+	line-height: 1;
+}
+
+div#header p.skip {
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+.hdrWrap {
+	background-color: #251802;
+}
+.hdrWrap .inWrap {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#siteID {
+	width: 198px;
+	float: left;
+}
+.hdrSec01 {
+	width: 755px;
+	float: right;
+}
+ul#hdrNav {
+	text-align: right;
+	margin-bottom: 9px;
+}
+ul#hdrNav li {
+	display: inline;
+	margin-left: 8px;
+}
+ul#globalNav li {
+	display: inline;
+	margin-right: 27px;
+}
+ul#globalNav {
+	padding-bottom: 11px;
+}
+
+/* gnavSub
+------------------------------- */
+div#container.activePrdcs {
+	background-position: 50% 122px;
+}
+div.activePrdcs #globalNav {
+	background: url(../../img/common/bg_hdr_02.png) no-repeat 347px 100%;
+}
+
+div.activeComp #globalNav {
+	background: url(../../img/common/bg_hdr_02.png) no-repeat 52px 100%;
+}
+
+ul#gnavSub {
+	background-color: #fbfaf7;
+	padding: 8px 0 7px;
+	text-align: center;
+}
+ul#gnavSub li {
+	display: inline;
+	margin-right: 33px;
+}
+
+
+
+/* ----------------------------------------
+
+content
+
+---------------------------------------- */
+
+div#content {
+	font-size: 92.3%;
+	letter-spacing: 1px;
+	padding-bottom: 95px;
+}
+
+/* noscript
+------------------------------- */
+
+div#content p#noscript {
+	margin-bottom: 15px;
+	padding: 0.5em 1em;
+	border: 2px solid #ccc;
+	color: #333;
+}
+
+/* topicPath
+------------------------------- */
+
+div#content ol#topicPath {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 5px 0 0;
+}
+
+div#content ol#topicPath li {
+	display: inline;
+	padding: 0 9px 0 15px;
+	background: url(../../img/common/img_topicpath_01.png) left center no-repeat;
+}
+
+div#content ol#topicPath li#topPage {
+	padding-left: 0;
+	background: none;
+}
+
+
+/* ----------------------------------------
+
+content - main
+
+---------------------------------------- */
+
+div#main {
+	width: 1030px;
+	margin: 0 auto;
+	background: url(../../img/common/bg_cnt_bttm.png) no-repeat 0 100%;
+	padding-bottom: 28px;
+}
+div#main .inWrapTop {
+	background: url(../../img/common/bg_cnt_top.png) no-repeat 0 0;
+	padding-top: 32px;
+}
+div#main .inWrap {
+	background: url(../../img/common/bg_cnt_01.png) repeat-y 0 0;
+}
+
+.title01 {
+	width: 34px;
+	float: left;
+	margin: 14px 0 0 53px;
+	display: inline;
+}
+
+.intitArea01 {
+	margin-bottom: 30px;
+	background: url(../../img/common/line_01.png) 0 100% repeat-x;
+}
+
+.intitArea01 h1.intit01 {
+	padding-bottom: 20px;
+}
+
+.section01 {
+	width: 787px;
+	float: right;
+	margin-right: 35px;
+	display: inline;
+	margin-bottom: 7px;
+	padding: 35px 43px 40px 40px;
+	background-color: #fff;
+	-moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	behavior: url(/files/js/PIE.htc);
+}
+
+.section02,
+.section03 {
+	width: 720px;
+	float: right;
+	margin-right: 35px;
+	display: inline;
+	margin-bottom: 7px;
+	padding: 35px 110px 40px 40px;
+	background: #fff url(../../img/common/bg_right_01.jpg) right 0 repeat-y;
+	-moz-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-webkit-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-o-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	-ms-box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	box-shadow: 0 0 5px 2px rgba(0,0,0,0.1);
+	behavior: url(/files/js/PIE.htc);
+}
+
+.section03 {
+	background: #fff url(../../img/common/bg_right_02.jpg) right 0 repeat-y;
+}
+
+.pagetop01 {
+	width: 1000px;
+	margin: 0 auto;
+	text-align: right;
+	padding-right: 5px;
+	margin-bottom: -12px;
+	position: relative;
+}
+
+.pagetop02 {
+	text-align: right;
+}
+.pagetop02 a {
+	background: url(../../img/common/arrow_top.png) no-repeat 0 2px;
+	padding-left: 20px;
+}
+
+
+.shortsec01 {
+	height: 466px;
+}
+
+/* ----------------------------------------
+
+footer
+
+---------------------------------------- */
+
+div#footer {
+	background: url(../../img/common/bg_ftr_01.png) repeat-x 0 0;
+	padding-top: 12px;
+}
+div#footer .ftrWrap {
+	padding: 20px 0 30px;
+	background-color: #FDFFD0;
+}
+div#footer .inWrap {
+	width: 1000px;
+	margin-left: 100px;
+}
+ul#ftrNav {
+	width: 320px;
+	float: left;
+}
+ul#ftrNav li {
+	display: inline;
+	margin-right: 22px;
+	font-size: 76.9%;
+	letter-spacing: 1px;
+}
+ul#ftrNav a:link,
+ul#ftrNav a:visited,
+ul#ftrNav a:active {
+	color: #887e6b;
+	text-decoration: none;
+	background: url(../../img/common/icon_arrw_01.png) no-repeat 0 0;
+	padding-left: 21px;
+	zoom: 1;
+	position: relative;
+}
+ul#ftrNav a:hover {
+	text-decoration: underline;
+	background-position: 0 -20px;
+}
+
+#copy {
+	// width: 400px;
+	text-align: left;
+	float: left;
+	font-size: 16px;
+	letter-spacing: 1px;
+	line-height: 2;
+	color: #887e6b;
+}
+
+/* ----------------------------------------
+
+opacity rollover
+
+---------------------------------------- */
+
+#siteID a:hover img {
+	opacity: .80; /* Standard: FF gt 1.5, Opera, Safari */  
+	filter: alpha(opacity=80); /* IE lt 8 */  
+	-ms-filter: "alpha(opacity=80)"; /* IE 8 */  
+	-khtml-opacity: .80; /* Safari 1.x */  
+	-moz-opacity: .80; /* FF lt 1.5, Netscape */
+}
+
+/* ----------------------------------------
+
+clearfix (基本的にクラス指定では使用しない)
+
+---------------------------------------- */
+
+/* Modern Browsers
+------------------------------- */
+
+div#main .inWrap:after,
+.hdrWrap .inWrap:after,
+.ftrWrap .inWrap:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+/* Legacy IE
+------------------------------- */
+
+div#main .inWrap,
+.hdrWrap .inWrap,
+.ftrWrap .inWrap {
+	*zoom: 1;
+}

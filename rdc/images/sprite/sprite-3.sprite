@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images/sprite" ImageName="sprite-3" IsPhone="false" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="g1intro.png" LocationX="0" LocationY="20" />
+    <Sprite Path="g1intro-active2.png" LocationX="0" LocationY="81" />
+    <Sprite Path="g4intro.png" LocationX="0" LocationY="145" />
+    <Sprite Path="g4intro-active2.png" LocationX="0" LocationY="207" />
+    <Sprite Path="g2intro.png" LocationX="0" LocationY="271" />
+    <Sprite Path="g2intro-active2.png" LocationX="0" LocationY="334" />
+    <Sprite Path="g3intro.png" LocationX="0" LocationY="398" />
+    <Sprite Path="g3intro-active2.png" LocationX="0" LocationY="461" />
+  </SpriteList>
+</SpriteFile>

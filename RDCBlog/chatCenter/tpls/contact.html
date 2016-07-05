@@ -1,0 +1,42 @@
+<div class="box">
+    <div class="box_hd with_border">
+        <div class="title_wrap">
+            <div class="title">详细信息</div>
+        </div>
+    </div>
+    <div class="box_bd">
+        <div ng-if="!current.friend" class="empty" >
+            <i class="web_wechat_no_contect"></i>
+        </div>
+        <div ng-if="current.friend">
+            <div class="profile">
+                <div class="avatar">
+                    <img class="img" src="../images/otherhead.jpg">
+                </div>
+                <div class="nickname_area">
+                    <h4 class="nickname">{{current.friend.nickName}}</h4>
+                    <i ng-class="{'web_wechat_women': current.friend.sex == '女', 'web_wechat_men': current.friend.sex != '女'}"></i>
+                </div>
+                <pre class="signature">{{current.friend.introduction}}</pre>
+                <div class="meta_area">
+                    <div class="meta_item" remark-directive>
+                       <label class="label" for="">备注：</label>
+                       <p class="value" ng-hide="isShow" ng-click="getShow()">{{remark || current.friend.remark || current.friend.nickName || '无'}}</p>
+                       <input type="text" class="remark_input" ng-show="isShow" ng-model="remark" ng-blur="cutLength()">
+                    </div>
+                    <div class="meta_item">
+                        <label class="label" for="">年龄：</label>
+                        <p class="value">{{current.friend.age}}</p>
+                    </div>
+                    <div class="meta_item">
+                        <label class="label" for="">Eamil：</label>
+                        <p class="value">{{current.friend.email}}</p>
+                    </div>
+                </div>
+                <div class="action_area">
+                    <a class="button" ui-sref="webwxindex.chat" send-to-directive href="#">发消息</a>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>

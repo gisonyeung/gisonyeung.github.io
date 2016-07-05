@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="renderer" content="webkit">
+	<title>2015级研发招新官网</title>
+	<link rel="stylesheet" href="css/apply.css">
+	<link href="framework/fixed-positioning.css" rel="stylesheet" type="text/css">
+	<!-- <link href="framework/main.css" rel="stylesheet" type="text/css"> -->
+</head>
+<body>
+	<div id="bg" data-0="background-position:center 0px;"></div>
+	<div id="topbar" class="topbar">
+		<div class="toppic">
+			<div class="topside">
+				<a href="index.html" class="logoLink">研发中心</a>
+				<ul id="topNav" class="topNav">
+	                <li><a href="index.html">招新首页</a></li>
+	                <li class="current"><a href="#">招新报名</a></li>
+	            </ul>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<h2 class="header">计算机工程研发中心-报名页面</h2>
+		<div class="table">
+		<form action="apply.html" name="table" method="POST">
+			<div class="section">
+				<input type="checkbox" class="switch" id="switch_1" checked>
+				<label for="switch_1">
+				<div class="title opened">
+					<span class="arrow"></span>
+					<h4 id="baseData">基本资料</h4>
+				</div>
+				</label>
+				<div class="formCnt">
+					<div class="form-control length-1 margin">
+						<span class="key">姓名<em class="important">*</em></span>
+						<input type="text" class="value" id="name" name="name" required>
+					</div>
+					<div class="form-control length-1 margin">
+						<span class="key">学号<em class="important">*</em></span>
+						<input type="text" class="value" id="studentId" required>
+					</div>
+					<div class="form-control length-1" id="sexChoice">
+						<span class="key">性别<em class="important">*</em></span>
+						<span id="sexText">男</span>
+						<input type="hidden" class="value" id="sex" name="sex" value="男">
+					</div>
+					<div class="form-control length-2 margin">
+						<span class="key">学院专业班级<em class="important">*</em></span>
+						<input type="text" class="value" id="class" name="class" required>
+					</div>
+					
+					<div class="form-control length-1">
+						<span class="key">现任职务</span>
+						<input type="text" class="value" id="duty" name="duty">
+					</div>
+					
+					<div class="form-control length-2 margin">
+						<span class="key">手机号码<em class="important">*</em></span>
+						<input type="text" class="value" id="phone" name="phone" required>
+					</div>
+					<div class="form-control length-1">
+						<span class="key">短号</span>
+						<input type="text" class="value" id="phone-short" name="phoneShort">
+					</div>
+					<div class="form-control length-2 margin">
+						<span class="key">邮箱</span>
+						<input type="text" class="value" id="email" name="email">
+					</div>
+					<div class="form-control length-1">
+						<span class="key">QQ<em class="important">*</em></span>
+						<input type="text" class="value" id="qq" name="qq" required>
+					</div>
+				</div>
+			</div>
+			<div class="section">
+				<input type="checkbox" class="switch" id="switch_2" checked>
+				<label for="switch_2">
+				<div class="title opened">
+					<span class="arrow"></span>
+					<h4 id="direction">报名方向</h4>
+				</div>
+				</label>
+				<div class="formCnt">
+					<input type="radio" id="radio_1" class="radio" name="direction" value="1" checked>
+					<label for="radio_1">
+						<div class="form-control length-1 dir-control">
+							<span class="circle"></span>
+							<span class="dir">Web 前端</span>
+						</div>
+					</label>
+					<input type="radio" id="radio_2" class="radio" name="direction" value="2">
+					<label for="radio_2">
+						<div class="form-control length-1 dir-control">
+							<span class="circle"></span>
+							<span class="dir">Java 后台开发</span>
+						</div>
+					</label>
+					<input type="radio" id="radio_3" class="radio" name="direction" value="3">
+					<label for="radio_3">
+						<div class="form-control length-1 dir-control">
+						<span class="circle"></span>
+						<span class="dir">Android 移动开发</span>
+						</div>
+					</label>
+					<input type="radio" id="radio_4" class="radio" name="direction" value="4">
+					<label for="radio_4">
+						<div class="form-control length-1 dir-control">
+							<span class="circle"></span>
+							<span class="dir">C++ 游戏开发</span>
+						</div>
+					</label>
+				</div>
+			</div>
+			<div class="section">
+				<input type="checkbox" class="switch" id="switch_3" checked>
+				<label for="switch_3">
+				<div class="title">
+					<span class="arrow"></span>
+					<h4 id="self">自我介绍</h4>
+				</div>
+				</label>
+				<div class="formCnt">
+					<div class="form-control length-block">
+						<span class="key">特长</span>
+						<input type="text" class="value" id="strongpoint" name="strongpoint">
+					</div>
+					<div class="form-control length-area">
+						<p class="key">自我简介（计算机类技能、经验或自我评价）<em class="important">*</em></p>
+						<textarea name="introduction" id="introduction" placeholder="这里输入你的自我介绍…" required></textarea>
+					</div>
+					<div class="form-control length-area">
+						<p class="key">加入本团队的目的及期望</p>
+						<textarea name="expectation" id="expectation" placeholder="这里输入你的目的期望…"></textarea>
+					</div>
+				</div>
+			</div>
+			<input type="submit" id="upload" name="upload" value="提交报名表">
+		</form>	
+		</div>
+	</div>
+	<a href="#" id="totop" title="返回顶部" data-menu-top="0"><span>返回顶部</span></a>
+	<!-- confirm -->
+	<div class="tipBox" id="confirm">
+		<div class="tipHead">
+			<p>确认报名</p>
+			<span id="c-close">x</span>
+		</div>
+		<div class="tipContent">
+    		<p>是否确认报名？</p>
+    		<div class="code">
+	    		<span>请输入验证码: </span>
+				<input type="text" id="securityCode">
+				<img src="url" alt="验证码无法显示" id="securityImg">
+    			<p id="codeText">请输入验证码！</p>
+    		</div>
+    	</div>
+    	<div class="tipFooter">
+    		<button class="tipBtn default" id="c-cancel">取消</button>
+    		<button class="tipBtn" id="c-ok">确认报名</button>
+    	</div>
+    </div>
+    <div class="mask" id="mask1"></div>
+	</div>
+	<!-- confirm -->
+	<div class="tipBox" id="tip">
+		<div class="tipHead">
+			<p>提示</p>
+			<span id="t-close">x</span>
+		</div>
+		<div class="tipContent">
+    		<p id="tipMsg">错误</p>
+    	</div>
+    	<div class="tipFooter">
+    		<button class="tipBtn danger" id="t-close">关闭</button>
+    	</div>
+    </div>
+    <div class="mask" id="mask2"></div>
+	</div>
+	<!--[if lte IE 8]>
+	<link rel="stylesheet" type="text/css" href="css/IE7.css">
+	<div id="ms_mask"></div>
+	<div id="ms_popping">
+		<div class="ms_head">
+			<img src="images/warn.png" class="ms_warn">
+			<h4>我们检测到您正在使用过时版本的IE浏览器，此版本的IE浏览器不被我们支持。</h4>
+			<div class="clr"></div>
+		</div>
+		<div class="ms_body">
+			<p>为了更好的浏览体验，我们推荐您使用以下新版本的现代浏览器：</p>
+			<div class="ms_introduce">
+				<a href="http://rj.baidu.com/soft/detail/14744.html?ald">
+					<div class="ms_intr">
+						<img src="images/chromelogo.jpg"/>
+						<h4>Chrome 谷歌浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<a href="http://rj.baidu.com/soft/detail/11843.html?ald">
+					<div class="ms_intr">
+						<img src="images/fflogo.jpg"/>
+						<h4>Firefox 火狐浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<div class="clr"></div>
+			</div>	
+		</div>
+	</div>
+	<![endif]-->
+	<script src="framework/skrollr.min.js"></script>
+	<script src="framework/skrollr.menu.min.js"></script>
+	<script src="framework/jquery-2.1.4.min.js"></script>
+	<script src="js/apply.js"></script>
+</body>
+</html>

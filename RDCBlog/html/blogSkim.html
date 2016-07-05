@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RDCBlog 文章浏览</title>
+	<meta http-equiv="Content-Type" content="charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="shortcut icon" href="../images/blog.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/blogSkim.css">
+	<link rel="stylesheet" type="text/css" href="../editor/plugins/code/shCoreDefault.css">
+	<script src="../editor/plugins/code/shCore.js" type="text/javascript"></script>
+	<!--[if IE 7]>
+	<link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+	<![endif]-->
+</head>
+<body>
+	<!-- 小屏 -->
+	<div class="menu">
+		<a class="menuSwitch icon-reorder"></a>
+	</div>
+	<!-- 通用侧边栏 -->
+	<div class="sideBar">
+		<a class="firstFloor"><span class="icon-home"> </span>主页</a>
+		<a class="firstFloor"><span class="icon-book"> </span>博客</a>
+			<a class="secondFloor">web前端</a>
+			<a class="secondFloor">后台开发</a>
+			<a class="secondFloor">安卓</a>
+			<a class="secondFloor">C++</a>
+			<a class="secondFloor">其他</a>
+		<a class="firstFloor"><span class="icon-camera-retro"> </span>照片墙</a>
+		<a class="firstFloor"><span class="icon-github"> </span>代码分享</a>
+		<a class="firstFloor"><span class="icon-flag"> </span>关于研发</a>
+			<a class="secondFloor">研发成员</a>
+			<a class="secondFloor">成就</a>
+			<a class="secondFloor">关于研发</a>
+	</div>
+	<!-- 登陆弹框 -->
+	<div id="miniLogin">
+			 <p class="loginTitle">登陆</p>
+			 <div class="loginInfo">
+				<span class="icon-user miniPst"></span>
+			 	<input id="miniUsername"  type="text" placeholder="用户名">
+			 </div>
+			 <div class="loginInfo">
+				<span class="icon-lock miniPst"></span>
+			 	<input id="miniPwd" type="password" placeholder="密码" maxlength="25">
+			 </div>
+			 <input class="miniSubmit" type="button" value="登陆">
+			 <a class="miniRegister" href="javascript:;">注册</a>
+	</div>
+	<div class="header">
+		<p class="teamName">RDC</p>
+		<!-- 大屏 -->
+		<ul class="nav">
+			<li><a><span class="lineae"></span>首页</a></li>
+			<li class="navActive"><a><span class="lineae"></span>博客</a>
+				<div class="subnav">
+					<ul>
+						<li><a><span class="lineae1"></span>全部文章</a></li>
+						<li><a><span class="lineae1"></span>web前端</a></li>
+						<li><a><span class="lineae1"></span>后台开发</a></li>
+						<li><a><span class="lineae1"></span>安卓</a></li>
+						<li><a><span class="lineae1"></span>C++</a></li>
+						<li><a><span class="lineae1"></span>其他</a></li>
+					</ul>
+				</div>
+			</li>
+			<li><a><span class="lineae"></span>照片墙</a></li>
+			<li><a><span class="lineae"></span>代码分享</a></li>
+			<li><a><span class="lineae"></span>关于研发</a>
+				<div class="subnav1">
+					<ul>
+						<li><a><span class="lineae1"></span>小组方向</a></li>
+						<li><a><span class="lineae1"></span>研发成员</a></li>
+						<li><a><span class="lineae1"></span>成就</a></li>
+						<li><a><span class="lineae1"></span>关于研发</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+		<div class="user">
+			<a class="loginButton">登陆</a>
+			<div class="userHead">
+				<img src="../images/headm.jpg" class="userHeadImg">
+				<div class="selfinfo">
+					<ul>
+						<li id="nickSwitch"><a><span id="nickname">牛一敏</span><span id="selfData">个人资料</span></a></li>
+						<li>博客管理</li>
+						<li>上传照片</li>
+						<li>分享代码</li>
+						<li>注销</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="mainPage">
+		<div id="wrap">
+			<div class="main">
+				<div class="tagline">
+					<h1 class="blogTitle">BLOG</h1>
+					<p class="describe">一个来自研发的纯净的技术交流圈</p>
+				</div>
+				<div class="clr"></div>
+				<div class="content">
+					<div id="top">
+						<div class="authorPack">
+							<img src="../images/headc.jpg" class="authorHead" draggable="false" data-authorId="xxx">
+							<p class="authorName"><a  href="http://www.baidu.com" target="_blank" title="查看资料">惜有</a></p>
+						</div>
+						<div class="articleInfoPack" data-articleId='xxx'>
+							<div class="titleTime">
+								<p class="title">webkit内核的safari、 Chrome的Linear Gradients</p>
+								<p class="timePack"><span class="icon-calendar"></span><span class="time">2015-09-01</span></p>
+								<div class="clr"></div>
+							</div>
+							<div class="tagCount">
+									<div class="tagPack" data-tags="CSS3 , Webkit内核 , 速度曲线">
+										<p class="tagTitle">Tags : </p>
+										<div class="tagDemo">
+											<p class="tag"><span class="icon-circle"></span><span class="tagContent"></span></p>
+										</div>
+										<div class="tagList">
+<!-- 											<p class="tag"><span class="icon-circle"></span><span class="tagContent">CSS3</span></p>
+											<p class="tag"><span class="icon-circle"></span><span class="tagContent">Webkit内核</span></p>
+											<p class="tag"><span class="icon-circle"></span><span class="tagContent">速度曲线</span></p> -->
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="CountPack">
+										<p class="count"><span class="countIcon icon-eye-open"></span><span>12</span></p>
+										<p class="count"><span class="countIcon icon-comment-alt"></span><span>24</span></p>
+										<p class="count"><span class="countIcon icon-heart likeUp" data-isPraised="xxx" id="like"></span><span>36</span></p>
+									</div>
+									<div class="clr"></div>
+								</div>
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="articleContent">
+						<p>做前端多年，虽然不是经常需要hack，但是我们经常会遇到各浏览器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友好的基于此，某些情况我们会极不情愿的使用这个不太友好的</p>
+						<p>做前端多年，虽然不是经常需要hack，但是我们经常会遇到各浏览器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友好的基于此，某些情况我们会极不情愿的使用这个不太友好的</p>
+						<p>做前端多年，虽然不是经常需要hack，但是我们经常会遇到各浏览器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友器表现不一致的情况。基于此，某些情况我们会极不情愿的使用这个不太友好的基于此，某些情况我们会极不情愿的使用这个不太友好的</p>
+						
+						
+						<pre class="brush:css toolbar:false prettyprint">pre.prettyprint {
+	border: 0;
+	border-left: 3px solid #61C3B3;
+	margin-left: 2em;
+	padding: 0.5em;
+	font-size: 13px;
+	display: block;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+	margin: 1em 0px;
+	white-space: pre;
+}</pre>
+<pre class="brush:html toolbar:false prettyprint">&lt;p class="copyrightSingle"&gt;Copyright 2015 RDC All Rights Reserved.&lt;/p&gt;
+	&lt;div id="tipBox"&gt;
+    	&lt;div class="tipHead"&gt;
+    		&lt;p&gt;Tip from RDC Blog&lt;/p&gt;&lt;span class="icon-remove icon-large tip_color"&gt;&lt;/span&gt;
+    		&lt;div class="clr"&gt;&lt;/div&gt;
+    	&lt;/div&gt;
+    	&lt;div class="tipContent"&gt;
+    		&lt;p&gt;This is the content.&lt;/p&gt;
+    	&lt;/div&gt;
+    	&lt;div class="tipFoot"&gt;
+    		&lt;input class="tipBtn" type="button" value="Close"/&gt;
+    		&lt;div class="clr"&gt;&lt;/div&gt;
+    	&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id="mask"&gt;&lt;/div&gt;
+     &lt;script src="../js/jquery-1.11.3.min.js" type="text/javascript"&gt;&lt;/script&gt;
+    &lt;script src="../js/blogSkim.js" type="text/javascript"&gt;&lt;/script&gt;
+     &lt;script&gt;prettyPrint();&lt;/script&gt;</pre>
+     <pre class="brush:js toolbar:false prettyprinte">// 输入框获得焦点时的交互
+	$(".f_name,.e_mail").focus(function(){
+		$(this).css("borderLeft","6px solid #D15858");
+		$(this).siblings("span").css("color","#D15858");
+	});
+	$(".secCode").focus(function(){
+		$(this).css("borderLeft","6px solid #D15858");
+		$(this).siblings("span").css("color","#D15858");
+		$(this).siblings("span").addClass("icon-spin");
+	});
+	// 运行脚本时即刻聚焦
+	$(".f_name").focus();
+
+   	function myAjax(_data, _url, callBack) {
+        $.ajax({
+            type: "post",
+            url: _url,
+            data: _data,
+            cache: false,
+            success: function (data) {
+                if (callBack != undefined) {
+                    callBack(data);
+                }
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {tip("网络连接超时")},
+            
+        });
+    }</pre>
+    <pre class="brush:java toolbar:false prettyprint">//检查是否已上传
+	if (@is_uploaded_file($tmp_name) === false) {
+		alert("上传失败。");
+	}
+	//检查文件大小
+	if ($file_size &gt; $max_size) {
+		alert("上传文件大小超过限制。");
+	}
+	//检查目录名
+	$dir_name = empty($_GET['dir']) ? 'image' : trim($_GET['dir']);
+	if (empty($ext_arr[$dir_name])) {
+		alert("目录名不正确。");
+	}
+	//获得文件扩展名
+	$temp_arr = explode(".", $file_name);
+	$file_ext = array_pop($temp_arr);
+	$file_ext = trim($file_ext);
+	$file_ext = strtolower($file_ext);
+	//检查扩展名
+	if (in_array($file_ext, $ext_arr[$dir_name]) === false) {
+		alert("上传文件扩展名是不允许的扩展名。\n只允许" . implode(",", $ext_arr[$dir_name]) . "格式。");
+	}
+	//创建文件夹
+	if ($dir_name !== '') {
+		$save_path .= $dir_name . "/";
+		$save_url .= $dir_name . "/";
+		if (!file_exists($save_path)) {
+			mkdir($save_path);
+		}
+	}
+	$ymd = date("Ymd");
+	$save_path .= $ymd . "/";
+	$save_url .= $ymd . "/";
+	if (!file_exists($save_path)) {
+		mkdir($save_path);
+	}
+	//新文件名
+	$new_file_name = date("YmdHis") . '_' . rand(10000, 99999) . '.' . $file_ext;
+	//移动文件
+	$file_path = $save_path . $new_file_name;
+	if (move_uploaded_file($tmp_name, $file_path) === false) {
+		alert("上传文件失败。");
+	}
+	@chmod($file_path, 0644);
+	$file_url = $save_url . $new_file_name;
+
+	header('Content-type: text/html; charset=UTF-8');
+	$json = new Services_JSON();
+	echo $json-&gt;encode(array('error' =&gt; 0, 'url' =&gt; $file_url));
+	exit;
+}</pre>
+<pre class="brush:css toolbar:false prettyprint">pre.prettyprint {
+	border: 0;
+	border-left: 3px solid #61C3B3;
+	margin-left: 2em;
+	padding: 0.5em;
+	font-size: 13px;
+	display: block;
+	font-family: Microsoft YaHei,Arial,sans-serif;
+	margin: 1em 0px;
+	white-space: pre;
+}</pre>
+<pre class="brush:js toolbar:false prettyprint">dfgdfg</pre>
+					</div>
+					<div class="categoryCount">
+						<div class="categoryPack">
+							<p class="categoryText">Category : </p>
+							<p class="category"><span class="icon-circle-blank"></span><span class="categoryContent">Web前端</span></p>
+							<p class="category"><span class="icon-circle-blank"></span><span class="categoryContent">HTML5&CSS3</span></p>
+							<div class="clr"></div>
+						</div>
+						<div class="CountPack">
+							<p class="count"><span class="countIcon icon-eye-open"></span><span>12</span></p>
+							<p class="count"><span class="countIcon icon-comment-alt"></span><span>24</span></p>
+							<p class="count"><span class="countIcon icon-heart likeUp"></span><span>36</span></p>
+						</div>
+						<div class="clr"></div>
+					</div>
+					<div class="touristPannel">
+						<div class="infoPack">
+							<p class="commonInfo">昵称*</p>
+							<input type="text" class="touristData" placeholder="必填" id="tNickname">
+							<div class="clr"></div>
+						</div>
+						<div class="infoPack infoPackLast">
+							<p class="commonInfo">Email*</p>
+							<input type="text" class="touristData" placeholder="不会公开，新回复将通过邮件提醒" id="tEmail">
+							<div class="clr"></div>
+						</div>
+						<div class="clr"></div>
+						<div class="tMessagePack">
+							<div class="messageInfoPack">
+								<p class="commonInfo">评论</p>
+								<div class="touristReplyPack"><p class="tReply"><span class="touristReply">回复 牛一敏</span><span class="icon-remove-sign tClose" title="取消回复"></span></p>
+								</div>
+								<div class="clr"></div>
+							</div>
+							<div class="tComment">
+								<textarea class="tMessage"></textarea>
+								<input type="button" value="添加评论" id="tAddComment">
+							</div>
+						</div>
+					</div>
+					<div class="memberPannel">
+						<img src="../images/headm.jpg" class="currentMember" draggable="false">
+						<div class="mMessagePack">
+							<p class="memberReply"><span class="replyName">回复 牛一敏</span><span class="icon-remove-sign mClose" title="取消回复"></span></p>
+							<textarea class="mMessage" placeholder="说点什么吧…"></textarea>
+							<div class="clr"></div>
+							<input type="button" value="添加评论" id="mAddComment">
+						</div>
+
+						<div class="clr"></div>
+					</div>
+					<p class="allow">评论内容允许使用以下标签: <em id="addA" title="嵌入链接">&lt;a <span>href=""</span>&gt;</em>，<em id="addStrong" title="强调内容">&lt;strong&gt;</em></p>
+					<div class="commentList">
+						<div class="commentElement" data-reviewId="xxx">
+							<img src="../images/demohead.jpg" class="reviewerHead" draggable="false">
+							<div class="commentPack">
+								<div class="hoverArea">
+									<div class="reviewerInfo">
+										<a href="http://www.baidu.com" target="_blank" class="reviewerName">牛五敏(游客)</a><span class="sign"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton firstReply" data-reviewId="xxx" data-reviewerId="xxx" title="回复"></span>
+									</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+								</div>
+								<p class="commentSwitch hiden">已隐藏<span>3</span>条评论 ↑</p>
+								<p class="commentSwitch showed">已显示<span>3</span>条评论 ↓</p>
+								<div class="clr"></div>
+								<div class="commentListSec">
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 10:27:33</span><span class="icon-comments replyButton secondReply"  data-reviewId="xxx" data-replierId="xxx" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 00:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 05:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="commentElement" data-reviewId="xxx">
+							<img src="../images/demohead.jpg" class="reviewerHead" draggable="false">
+							<div class="commentPack">
+								<div class="hoverArea">
+									<div class="reviewerInfo">
+										<a href="http://www.baidu.com" target="_blank" class="reviewerName">牛五敏(游客)</a><span class="sign"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton firstReply" data-reviewId="xxx" data-reviewerId="xxx" title="回复"></span>
+									</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+								</div>
+								<p class="commentSwitch hiden">已隐藏<span>3</span>条评论 ↑</p>
+								<p class="commentSwitch showed">已显示<span>3</span>条评论 ↓</p>
+								<div class="clr"></div>
+								<div class="commentListSec">
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton secondReply"  data-reviewId="xxx" data-replierId="xxx" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 08:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+						<div class="commentElement" data-reviewId="xxx">
+							<img src="../images/demohead.jpg" class="reviewerHead" draggable="false">
+							<div class="commentPack">
+								<div class="hoverArea">
+									<div class="reviewerInfo">
+										<a href="http://www.baidu.com" target="_blank" class="reviewerName">牛五敏(游客)</a><span class="sign"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton firstReply" data-reviewId="xxx" data-reviewerId="xxx" title="回复"></span>
+									</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+								</div>
+								<p class="commentSwitch hiden">已隐藏<span>3</span>条评论 ↑</p>
+								<p class="commentSwitch showed">已显示<span>3</span>条评论 ↓</p>
+								<div class="clr"></div>
+								<div class="commentListSec">
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton secondReply"  data-reviewId="xxx" data-replierId="xxx" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 08:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+									<div class="commentElementSec">
+										<img src="../images/demohead.jpg" class="reviewerHeadSec" draggable="false">
+										<div class="commentPackSec">
+											<div class="reviewerInfoSec">
+												<a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerFrom">牛五敏(游客)</a><p class="responsePack"><span class="response">回复</span><a href="http://www.baidu.com" target="_blank" class="reviewerName reviewerTo">牛六敏(游客)</a></p><span class="signSec"> · </span><span class="commentTime">2015-08-24 15:27:33</span><span class="icon-comments replyButton secondReply" title="回复"></span>
+												<div class="clr"></div>
+											</div>
+<pre class="commentContent">看起来很棒的样子
+nice，看起来很棒的样子，不错~
+</pre>
+										</div>
+										<div class="clr"></div>
+									</div>
+								</div>
+								<div class="clr"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clr"></div>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<p class="copyrightSingle">Copyright 2015 RDC All Rights Reserved.</p>
+	<div id="tipBox">
+    	<div class="tipHead">
+    		<p>Tip from RDC Blog</p><span class="icon-remove icon-large tip_color"></span>
+    		<div class="clr"></div>
+    	</div>
+    	<div class="tipContent">
+    		<p>This is the content.</p>
+    	</div>
+    	<div class="tipFoot">
+    		<input class="tipBtn" type="button" value="Close"/>
+    		<div class="clr"></div>
+    	</div>
+    </div>
+    <div id="mask"></div>
+    <div class="codeDemo">
+    	<div class="codeToggle">
+	    	<p id="codeShow" class="codeSwitch"><span class="icon-plus-sign"></span>展开代码 …</p>
+	    	<p id="codeHide" class="codeSwitch"><span class="icon-minus-sign"></span>收起代码</p>
+	    	<div class="clr"></div>
+    	</div>
+    </div>
+     <script src="../js/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../js/blogSkim.js" type="text/javascript"></script>
+    <script>SyntaxHighlighter.all();</script>
+    <!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="../css/IE7.css">
+	<div id="ms_mask"></div>
+	<div id="ms_popping">
+		<div class="ms_head">
+			<img src="../images/warn.png" class="ms_warn">
+			<h4>我们检测到您正在使用过时版本的IE浏览器，此版本的IE浏览器不被我们支持。</h4>
+			<div class="clr"></div>
+		</div>
+		<div class="ms_body">
+			<p>为了更好的浏览体验，我们推荐您使用以下新版本的现代浏览器：</p>
+			<div class="ms_introduce">
+				<a href="http://rj.baidu.com/soft/detail/14744.html?ald">
+					<div class="ms_intr">
+						<img src="../images/chromelogo.jpg"/>
+						<h4>Chrome 谷歌浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<a href="http://rj.baidu.com/soft/detail/11843.html?ald">
+					<div class="ms_intr">
+						<img src="../images/fflogo.jpg"/>
+						<h4>Firefox 火狐浏览器</h4>
+						<p>PC/Mac/Linux</p>
+					</div>
+				</a>
+				<div class="clr"></div>
+			</div>	
+		</div>
+	</div>
+<![endif]-->
+</body>
+</html>
