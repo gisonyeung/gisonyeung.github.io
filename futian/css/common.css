@@ -129,6 +129,12 @@ a {
 .sm-show {
   display: none; }
 
+.main-wrapper {
+  width: 100%;
+  max-width: 990px;
+  margin: -23px auto 50px;
+  background-color: #fff; }
+
 @media screen and (max-width: 1190px) {
   .inner-wrapper {
     width: 100%;
@@ -244,6 +250,13 @@ a {
 
   .footer.grey {
     background-color: #f5f5f5;
-    border: none; } }
+    border: none; }
+
+  .main-wrapper {
+    margin-top: 0;
+    margin-bottom: 20px; }
+  .main-wrapper .main {
+    padding: 0 20px 30px;
+    margin-top: 20px; } }
 
 /*# sourceMappingURL=common.css.map */
