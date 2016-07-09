@@ -1,0 +1,249 @@
+@charset "UTF-8";
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, Tahoma, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", STXihei, STHeiti, Heiti, SimSun, sans-serif; }
+
+ul, ol {
+  list-style-type: none; }
+
+button {
+  border: none;
+  padding: 0;
+  outline: medium; }
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit; }
+
+.fixed {
+  *zoom: 1; }
+.fixed:after {
+  content: '';
+  display: table;
+  clear: both;
+  overflow: hidden; }
+
+#wrapper {
+  width: auto;
+  height: auto;
+  overflow: visible; }
+
+.inner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1190px;
+  margin: 0 auto; }
+
+.header {
+  background-color: #fff;
+  height: 60px; }
+.header .ft-brand {
+  height: 60px;
+  line-height: 60px;
+  float: left;
+  border-bottom: none; }
+.header .ft-brand .ft-logo {
+  position: absolute;
+  top: 17px;
+  display: inline-block;
+  height: 0;
+  width: 236px;
+  padding-top: 25px;
+  text-indent: -9999px;
+  overflow: hidden;
+  background: url("../img/brand2.png") transparent no-repeat center top; }
+.header .nav {
+  height: 60px;
+  line-height: 60px;
+  float: right; }
+.header .ft-list {
+  font-size: 14px; }
+.header .ft-list li {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  margin-left: 30px;
+  height: 58px;
+  line-height: 58px; }
+.header .ft-list li a {
+  color: #333;
+  transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  /* Firefox 4 */
+  -webkit-transition: all 0.15s ease-out;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.15s ease-out; }
+.header .ft-list li a:visited {
+  color: #333; }
+.header .ft-list li a:hover {
+  color: #1199ed; }
+.header .ft-list li.active a {
+  color: #1199ed; }
+
+.section {
+  background-color: #fff; }
+.section.grey {
+  background-color: #F5F5F5; }
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  background-color: #fff;
+  text-align: center;
+  padding-bottom: 25px; }
+.footer .navfooter {
+  font-size: 14px;
+  padding: 30px 0 15px 0; }
+.footer .navfooter a {
+  color: #666;
+  padding-left: 15px;
+  transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  /* Firefox 4 */
+  -webkit-transition: all 0.15s ease-out;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.15s ease-out; }
+.footer .navfooter a:first-child {
+  padding-left: 0; }
+.footer .navfooter a:hover {
+  color: #1199ed; }
+.footer .info {
+  color: #999;
+  font-size: 12px; }
+.footer .info span {
+  padding: 0 4px; }
+.footer .info span:first-child {
+  padding: 0; }
+.footer .info a {
+  color: #999;
+  transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  /* Firefox 4 */
+  -webkit-transition: all 0.15s ease-out;
+  /* Safari 和 Chrome */
+  -o-transition: all 0.15s ease-out; }
+.footer .info a:hover {
+  color: #1199ed; }
+
+.sm-show {
+  display: none; }
+
+@media screen and (max-width: 1190px) {
+  .inner-wrapper {
+    width: 100%;
+    max-width: 990px; } }
+@media screen and (max-width: 768px) {
+  body.hidden {
+    overflow: hidden; }
+
+  .sm-show {
+    display: block; }
+
+  .sm-hide {
+    display: none; }
+
+  .header {
+    height: 50px;
+    text-align: center; }
+  .header .inner-wrapper {
+    position: static; }
+  .header .ft-brand {
+    float: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    z-index: 9005;
+    background-color: #fff; }
+  .header .ft-brand .ft-logo {
+    background: url("../img/brand.png") transparent no-repeat center top;
+    display: inline-block;
+    height: 0;
+    width: 236px;
+    padding-top: 27px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-size: contain;
+    position: static;
+    margin-top: 12px; }
+  .header .menu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    height: 50px;
+    width: 50px;
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 9006;
+    transition: all 0.15s ease-out;
+    -moz-transition: all 0.15s ease-out;
+    /* Firefox 4 */
+    -webkit-transition: all 0.15s ease-out;
+    /* Safari 和 Chrome */
+    -o-transition: all 0.15s ease-out; }
+  .header .menu:active {
+    background-color: #eee; }
+  .header .menu a {
+    display: inline-block;
+    height: 0;
+    width: 16px;
+    padding-top: 16px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url("../img/menu.png") transparent no-repeat center top;
+    margin-top: 4px; }
+  .header .nav {
+    position: absolute;
+    top: 0;
+    left: -140px;
+    width: 140px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 9004;
+    border-right: 1px solid #e5e5e5;
+    opacity: 0;
+    text-align: left; }
+  .header .nav .ft-list {
+    margin-top: 50px; }
+  .header .nav .ft-list li {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #e5e5e5;
+    padding-left: 12px;
+    margin-left: 0px;
+    border-left: 4px solid #fff; }
+  .header .nav .ft-list li.active {
+    border-left-color: #1199ed;
+    background-color: #f5f5f5; }
+  .header .nav .ft-list li a {
+    display: block; }
+  .header .nav.active {
+    opacity: 1;
+    left: 0; }
+  .header .mask {
+    position: absolute;
+    z-index: 9003;
+    left: 0;
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  .header .mask.active {
+    display: block;
+    opacity: .3;
+    filter: alpha(opacity=30); }
+
+  .footer.grey {
+    background-color: #f5f5f5;
+    border: none; } }
+
+/*# sourceMappingURL=common.css.map */
