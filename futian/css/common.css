@@ -136,7 +136,7 @@ a {
   background-color: #fff; }
 
 .sm-show {
-  display: none !important; }
+  display: none; }
 
 @media screen and (max-width: 1190px) {
   .inner-wrapper {
