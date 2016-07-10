@@ -126,14 +126,17 @@ a {
 .footer .info a:hover {
   color: #1199ed; }
 
-.sm-show {
-  display: none; }
-
+@media screen and (min-width: 768px) {
+  .sm-show {
+    display: none !important; } }
 .main-wrapper {
   width: 100%;
   max-width: 990px;
   margin: -23px auto 50px;
   background-color: #fff; }
+
+.sm-show {
+  display: none !important; }
 
 @media screen and (max-width: 1190px) {
   .inner-wrapper {
@@ -147,7 +150,7 @@ a {
     display: block; }
 
   .sm-hide {
-    display: none; }
+    display: none !important; }
 
   .header {
     height: 50px;
