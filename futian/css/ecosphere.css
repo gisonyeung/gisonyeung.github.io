@@ -9,8 +9,8 @@ body {
   max-width: 100%; }
 .slider-list .wrap-tx {
   position: absolute;
-  width: 55%;
-  left: 22.5%;
+  width: 70%;
+  left: 15%;
   top: 35%; }
 .slider-list #slider-item1 {
   background-color: #596396; }
@@ -20,8 +20,8 @@ body {
 .slider-list #slider-item1 .wrap-tx {
   display: inline-block;
   height: 0;
-  width: 55%;
-  padding-top: 84px;
+  width: 70%;
+  padding-top: 126px;
   text-indent: -9999px;
   overflow: hidden;
   background: url("../img/b1-text1.png") transparent no-repeat center top; }
@@ -102,8 +102,8 @@ body {
   .slider-list #slider-item1 .wrap-tx {
     display: inline-block;
     height: 0;
-    width: 55%;
-    padding-top: 45px;
+    width: 70%;
+    padding-top: 50px;
     text-indent: -9999px;
     overflow: hidden;
     background: url("../img/b1-text1.png") transparent no-repeat center top;
