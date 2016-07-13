@@ -35,6 +35,8 @@ body {
 .news-nav li.active {
   color: #fff;
   background-color: #1199ed; }
+.news-nav li a {
+  display: block; }
 
 .company-content {
   display: none; }
