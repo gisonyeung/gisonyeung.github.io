@@ -220,7 +220,8 @@
 .section.notice .wrap-head h3 a:hover {
   color: #1199ed; }
 .section.notice .wrap-content {
-  padding: 20px 18px 17px 20px; }
+  padding: 20px 18px 17px 20px;
+  min-height: 115px; }
 .section.notice .wrap-content ul {
   font-size: 12px;
   color: #333; }

@@ -67,6 +67,7 @@ $(document).ready(function() {
 			page_tpl_curr = $('#page_tpl_curr').html().trim(),
 			page_tpl_break = $('#page_tpl_break').html().trim(),
 			page_tpl_spec = $('#page_tpl_spec').html().trim(),
+			page_tpl_first = $('#page_tpl_first').html().trim(),
 			allpagesHTML = '',
 			pageArray = calPage(curPage, allPage);
 		
@@ -93,12 +94,22 @@ $(document).ready(function() {
 			}
 			allpagesHTML += item;
 		}
+
+
+		// 不是第一页，则生成省略块
+		if( pageArray[0] != 1) {
+			var item = page_tpl_first.replace('{{url}}', createUrl(1))
+									 .replace('{{number}}', 1);
+			allpagesHTML += item;						 
+		}
 		// 不是最后一页，则生成省略块
 		if( pageArray[len - 1] != allPage) {
 			var item = page_tpl_break.replace('{{url}}', createUrl(allPage))
 									 .replace('{{number}}', allPage);
 			allpagesHTML += item;						 
 		}
+
+
 		// 写入DOM
 		$('#nextPage').before($(allpagesHTML));
 	}
