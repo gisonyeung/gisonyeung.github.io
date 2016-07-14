@@ -52,6 +52,11 @@ body {
   color: #999;
   width: 100%;
   box-sizing: border-box; }
+.news-item.norecord {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  padding-bottom: 100px; }
 .news-item .news-top {
   width: 100%;
   overflow: auto; }

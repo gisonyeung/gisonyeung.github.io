@@ -63,13 +63,19 @@ $(document).ready(function() {
 	function updatePage() {
 		var pagination = $('.pagination'),
 			curPage = param.pageNow,
-			allPage = parseInt(pagination.attr('data-all'), 10) || 1,
-			page_tpl_curr = $('#page_tpl_curr').html().trim(),
+			allPage = parseInt(pagination.attr('data-all'), 10) || 1;
+
+		if( allPage == 1) {
+			return false;
+		}
+
+		var page_tpl_curr = $('#page_tpl_curr').html().trim(),
 			page_tpl_break = $('#page_tpl_break').html().trim(),
 			page_tpl_spec = $('#page_tpl_spec').html().trim(),
 			page_tpl_first = $('#page_tpl_first').html().trim(),
 			allpagesHTML = '',
 			pageArray = calPage(curPage, allPage);
+
 		
 		// 修改上一页下一页指向
 		if(curPage == 1) {

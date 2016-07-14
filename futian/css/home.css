@@ -51,12 +51,12 @@
 .digest .wrap-tx p {
   position: relative;
   width: 70%;
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
-  line-height: 18px;
+  line-height: 20px;
   z-index: 2;
   margin: 0 auto;
-  font-family: tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif; }
+  text-align: center; }
 .digest .wrap-tx img {
   position: relative;
   margin-top: -8px;
@@ -140,10 +140,11 @@
   font-size: 22px;
   line-height: 50px; }
 .section.business .wg-caption p {
-  font-size: 12px;
+  font-size: 14px;
   color: #fefefe;
   line-height: 18px;
-  margin-top: -8px; }
+  margin-top: 2px;
+  max-width: 85%; }
 .section.business .wg-content {
   letter-spacing: -.4em;
   margin-left: 298px;
