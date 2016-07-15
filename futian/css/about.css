@@ -5,16 +5,11 @@ body {
   position: relative;
   text-align: center;
   font-size: 0; }
-.slider-list .wrap-tx {
-  position: absolute;
-  width: 55%;
-  left: 22.5%;
-  top: 35%; }
 .slider-list #slider-item1 {
-  background-color: #4C6D9A; }
+  background-color: #6d8498; }
 .slider-list #slider-item1 .wrap-bg {
   height: 320px;
-  background: url(../img/banner-about.jpg) center center no-repeat #4C6D9A; }
+  background: url(../img/banner-about.jpg) center center no-repeat #6d8498; }
 .slider-list #slider-item1 img {
   display: none; }
 
@@ -68,6 +63,7 @@ body {
   margin: 15px 0; }
 .main .wrap-employ {
   position: relative;
+  color: #333;
   margin-top: 20px; }
 .main .wrap-employ h3 {
   margin-bottom: 5px; }

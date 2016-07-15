@@ -65,6 +65,9 @@ body {
   color: #333; }
 .detail-content .detail-news p {
   margin: 0 0 1em; }
+.detail-content .detail-news a {
+  color: #1199ed;
+  text-decoration: underline; }
 .detail-content .detail-footer {
   font-size: 14px;
   color: #999;
