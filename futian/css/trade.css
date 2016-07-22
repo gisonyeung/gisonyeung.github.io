@@ -29,11 +29,11 @@ body {
 .section.part1 {
   text-align: center; }
 .section.part1 .wrap-text {
-  padding: 50px 0;
+  padding: 70px 0;
   font-size: 16px;
   color: #444; }
 .section.part1 .wrap-text p {
-  margin: 8px 0; }
+  margin: 12px 0; }
 .section.part1 .cards {
   width: 100%;
   padding-bottom: 50px; }
@@ -69,21 +69,22 @@ body {
   width: 139px;
   margin-left: -70px; }
 .section.part2 {
-  padding: 60px 0; }
+  padding: 0 0 60px; }
 .section.part2 h2 {
+  padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }
 .section.part2 .wrap-tx {
-  margin-top: 22px;
-  padding: 40px 10px;
+  padding: 60px 10px;
   border: 1px solid #e5e5e5;
   text-align: center; }
 .section.part2 .wrap-tx img {
   width: 90%;
-  max-width: 600px; }
+  max-width: 857px; }
 .section.part3 {
-  padding: 50px 0; }
+  padding: 0 0 60px; }
 .section.part3 h2 {
+  padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }
 .section.part3 .cards .card {
@@ -92,14 +93,18 @@ body {
   *display: inline;
   float: left;
   width: 49%; }
+.section.part3 .cards .card.a img {
+  margin-top: 60px; }
 .section.part3 .cards .card.b {
   margin-left: 2%; }
+.section.part3 .cards .card.b img {
+  margin-top: 40px; }
 .section.part3 .wrap-tx {
-  margin-top: 12px;
   height: 500px;
-  background-color: #fff; }
+  background-color: #fff;
+  text-align: center; }
 .section.part3 .wrap-tx img {
-  display: none; }
+  max-width: 90%; }
 
 @media screen and (max-width: 768px) {
   .slider-list {
@@ -127,7 +132,7 @@ body {
     background-size: contain; }
 
   .section.part1 .wrap-text {
-    padding: 20px; }
+    padding: 40px 0 20px; }
   .section.part1 .wrap-text p {
     margin: 2px 0; }
   .section.part1 .cards {
@@ -152,16 +157,17 @@ body {
     margin-left: -50px;
     bottom: 19px; }
   .section.part2 {
-    padding: 15px 20px 20px; }
+    padding: 0 20px 25px; }
   .section.part2 h2 {
+    padding: 20px 0;
     font-size: 16px;
     font-weight: normal; }
   .section.part2 .wrap-tx {
-    margin-top: 22px;
     padding: 20px 10px; }
   .section.part3 {
-    padding: 20px 20px 20px; }
+    padding: 0 20px 20px; }
   .section.part3 h2 {
+    padding: 20px 0;
     font-size: 16px;
     font-weight: normal; }
   .section.part3 .cards .card {
@@ -169,13 +175,11 @@ body {
     float: none;
     width: 100%; }
   .section.part3 .cards .card.b {
-    margin-top: 20px;
     margin-left: 0; }
   .section.part3 .wrap-tx {
-    margin-top: 12px;
-    height: 340px;
+    height: auto;
     background-color: #fff; }
   .section.part3 .wrap-tx img {
-    display: none; } }
+    margin-bottom: 50px; } }
 
 /*# sourceMappingURL=trade.css.map */

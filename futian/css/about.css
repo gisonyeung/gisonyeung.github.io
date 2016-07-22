@@ -61,6 +61,11 @@ body {
 .main .wrap-content p {
   text-indent: 2em;
   margin: 15px 0; }
+.main .wrap-content .our-wish {
+  margin-top: 60px;
+  text-align: center; }
+.main .wrap-content .our-wish p {
+  text-indent: 0; }
 .main .wrap-employ {
   position: relative;
   color: #333;
