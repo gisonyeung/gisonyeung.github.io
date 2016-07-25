@@ -71,21 +71,24 @@ body {
 .section.part2 {
   padding: 0 0 50px; }
 .section.part2 h2 {
+  color: #333;
   padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }
 .section.part2 .wrap-tx {
   padding: 40px 10px;
   margin-bottom: 45px;
-  border: 1px solid #e5e5e5;
+  border-bottom: 1px solid #eee;
   text-align: center; }
 .section.part2 .wrap-tx:last-child {
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  border-bottom: 0; }
 .section.part2 img {
   max-width: 90%; }
 .section.part3 {
   padding: 0 0 60px; }
 .section.part3 h2 {
+  color: #333;
   padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }

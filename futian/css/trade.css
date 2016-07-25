@@ -71,12 +71,13 @@ body {
 .section.part2 {
   padding: 0 0 60px; }
 .section.part2 h2 {
+  color: #333;
   padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }
 .section.part2 .wrap-tx {
   padding: 60px 10px;
-  border: 1px solid #e5e5e5;
+  border-top: 1px solid #eee;
   text-align: center; }
 .section.part2 .wrap-tx img {
   width: 90%;
@@ -84,6 +85,7 @@ body {
 .section.part3 {
   padding: 0 0 60px; }
 .section.part3 h2 {
+  color: #333;
   padding: 45px 0;
   font-size: 22px;
   font-weight: normal; }
