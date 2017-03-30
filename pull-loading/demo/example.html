@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>下拉刷新插件使用演示</title>
+<link rel="stylesheet" href="../src/pull-loading.css">
+<style>
+    body {
+        margin: 0;
+    }
+    #container {
+        height: 1000px;
+    }
+</style>
+</head>
+<body>
+    <div id="container">
+        <ul id="list"><li>加载次数：0</li></ul>
+    </div>
+    <script src="../src/pull-loading.js"></script>
+    <script>
+        var loadTimes = 0;
+
+        new PullLoading(document.getElementById('container'), {
+            icon: 'rectAlpha',
+            callback: function(done) {
+                setTimeout(function() {
+                    document.getElementById('list').innerHTML = '<li>加载次数：' + ++loadTimes + '</li>';
+
+                    // 执行完毕时调用此函数，隐藏下拉刷新
+                    done();
+                }, 2000);
+            },
+            timeout: 5000, // 超时未调用 done 函数则自动调用
+            timeoutCallback: function() {console.log('timeout')},
+        });
+    </script>
+
+</body>
+</html>
